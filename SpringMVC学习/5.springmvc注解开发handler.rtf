@@ -1,0 +1,167 @@
+{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Menlo-Bold;
+\f3\fnil\fcharset0 Menlo-Regular;\f4\fnil\fcharset0 Menlo-Italic;}
+{\colortbl;\red255\green255\blue255;\red251\green2\blue7;\red127\green0\blue85;\red100\green100\blue100;
+\red42\green0\blue255;\red63\green127\blue95;\red106\green62\blue62;\red0\green0\blue0;\red63\green95\blue191;
+\red0\green128\blue128;\red63\green127\blue127;\red127\green0\blue127;}
+{\*\expandedcolortbl;;\cssrgb\c100000\c14913\c0;\csgenericrgb\c49804\c0\c33333;\csgenericrgb\c39216\c39216\c39216;
+\csgenericrgb\c16471\c0\c100000;\csgenericrgb\c24706\c49804\c37255;\csgenericrgb\c41569\c24314\c24314;\cssrgb\c0\c0\c0;\csgenericrgb\c24706\c37255\c74902;
+\csgenericrgb\c0\c50196\c50196;\csgenericrgb\c24706\c49804\c49804;\csgenericrgb\c49804\c0\c49804;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs32 \cf0 \'d0\'c2\'bd\'a8
+\f1 java
+\f0 \'b3\'cc\'d0\'f2\'a3\'ac\'bf\'bd\'b1\'b4\'d6\'ae\'c7\'b0\'b5\'c4\'a3\'ac\'ca\'b9\'d3\'c3\'d7\'a2\'bd\'e2\'bf\'aa\'b7\'a2\
+1.\'ca\'b9\'d3\'c3\'d7\'a2\'bd\'e2\'bf\'aa\'b7\'a2\'b5\'c4java\'c0\'e0\'b2\'bb\'d3\'c3\'ca\'b5\'cf\'d6\'bd\'d3\'bf\'da\'a3\'ac\'ca\'b9\'d3\'c3\'d7\'a2\'bd\'e2:\
+\cf2 @Controller\cf0 \
+(
+\f2\b \cf3 import
+\f3\b0 \cf0  org.springframework.stereotype.Controller;
+\f0 \'b0\'fc\'cf\'c2)\
+\
+2.\'ca\'b9\'d3\'c3\'d7\'a2\'bd\'e2\'b5\'c4\'d3\'b3\'c9\'e4\'c6\'f7\'ba\'cd\'d7\'a2\'bd\'e2\'b5\'c4\'ca\'ca\'c5\'e4\'c6\'f7\'a3\'ac\'b1\'d8\'d0\'eb\'c5\'e4\'b6\'d4\'ca\'b9\'d3\'c3\'a3\'ac\'bc\'b4\'b6\'bc\'d2\'aa\'cd\'a8\'b9\'fd\'d7\'a2\'bd\'e2\'c0\'b4\'c5\'e4\'d6\'c3\'a3\'ac\'b2\'bb\'c4\'dc\'d4\'d9\'ca\'b9\'d3\'c3\'d6\'ae\'c7\'b0\'b7\'c7\'d7\'a2\'bd\'e2\'b5\'c4\'d0\'ce\'ca\'bd\'a1\'a3\
+\'ca\'b9\'d3\'c3\'d7\'a2\'bd\'e2\'a3\'ba\
+\cf2 @RequestMapping(\'a1\'b0url\'b5\'d8\'d6\'b7\'a1\'b1)\cf0 \'a3\'ac\'be\'cd\'cf\'f1struts2\'b5\'c4@Action(value=\'a1\'b0url\'a1\'b1)\
+\'b2\'a2\'c7\'d2\'bd\'a8\'d2\'e9\'d5\'e2\'b8\'f6\'d7\'a2\'bd\'e2\'d6\'d0\'b5\'c4url\'b5\'d8\'d6\'b7\'ba\'cd\'b7\'bd\'b7\'a8\'c3\'fb\'d2\'bb\'d6\'c2\'a3\'ac\'b1\'e3\'d3\'da\'ce\'ac\'bb\'a4\
+\'d2\'bb\'b8\'f6\'b7\'bd\'b7\'a8\'b6\'d4\'d3\'a6\'d2\'bb\'b8\'f6url\
+\'c0\'fd\'c8\'e7\'a3\'ba\'bf\'c9\'d2\'d4\'d3\'c3
+\f3 \cf4 @RequestMapping\cf0 (\cf5 "/queryItems"\cf0 )\
+		
+\f0 \'d2\'b2\'bf\'c9\'d2\'d4\'d3\'c3
+\f3 \cf4 @RequestMapping\cf0 (\cf5 "/queryItems.action\'94\cf0 )\
+\
+\pard\pardeftab720\partightenfactor0
+\cf4 @Controller\cf0 \
+
+\f2\b \cf3 public
+\f3\b0 \cf0  
+\f2\b \cf3 class
+\f3\b0 \cf0  ItemsController3  \{\
+\
+	\cf4 @RequestMapping\cf0 (\cf5 "/queryItems"\cf0 )\
+	\cf6 //
+\f0 \'c9\'cc\'c6\'b7\'b2\'e9\'d1\'af\'c1\'d0\'b1\'ed
+\f3 \cf0 \
+	
+\f2\b \cf3 public
+\f3\b0 \cf0  ModelAndView quertItems() 
+\f2\b \cf3 throws
+\f3\b0 \cf0  Exception \{\
+		\
+		\cf6 //
+\f0 \'b5\'f7\'d3\'c3
+\f3 service
+\f0 \'b2\'e9\'d5\'d2\'ca\'fd\'be\'dd\'bf\'e2\'a3\'ac\'b2\'e9\'d1\'af\'c9\'cc\'c6\'b7\'c1\'d0\'b1\'ed\'a3\'ac\'d5\'e2\'c0\'ef\'ca\'b9\'d3\'c3\'be\'b2\'cc\'ac\'ca\'fd\'be\'dd
+\f3 \cf0 \
+		List<Items> \cf7 itemsList\cf0  = 
+\f2\b \cf3 new
+\f3\b0 \cf0  ArrayList<>() ;\
+\cf6 //		//
+\f0 \'cc\'ee\'b3\'e4\'ca\'fd\'be\'dd
+\f3 \cf0 \
+		Items \cf7 items_1\cf0  = 
+\f2\b \cf3 new
+\f3\b0 \cf0  Items();\
+		\cf7 items_1\cf0 .setName(\cf5 "
+\f0 \'c1\'aa\'cf\'eb\'b1\'ca\'bc\'c7\'b1\'be
+\f3 "\cf0 );\
+		\cf7 items_1\cf0 .setPrice(6000f);\
+		\cf7 items_1\cf0 .setDetail(\cf5 "ThinkPad T430 
+\f0 \'c1\'aa\'cf\'eb\'b1\'ca\'bc\'c7\'b1\'be\'b5\'e7\'c4\'d4\'a3\'a1
+\f3 "\cf0 );\
+\
+		Items \cf7 items_2\cf0  = 
+\f2\b \cf3 new
+\f3\b0 \cf0  Items();\
+		\cf7 items_2\cf0 .setName(\cf5 "
+\f0 \'c6\'bb\'b9\'fb\'ca\'d6\'bb\'fa
+\f3 "\cf0 );\
+		\cf7 items_2\cf0 .setPrice(5000f);\
+		\cf7 items_2\cf0 .setDetail(\cf5 "iphone5  
+\f0 \'c6\'bb\'b9\'fb\'ca\'d6\'bb\'fa\'a3\'a1
+\f3 "\cf0 );\
+\
+		\cf7 itemsList\cf0 .add(\cf7 items_1\cf0 );\
+		\cf7 itemsList\cf0 .add(\cf7 items_2\cf0 );\
+		\
+		\
+		\cf6 //
+\f0 \'b7\'b5\'bb\'d8
+\f3 ModelAndView\cf0 \
+		ModelAndView \cf7 modelAndView\cf0  = 
+\f2\b \cf3 new
+\f3\b0 \cf0  ModelAndView() ;\
+		\
+		\cf6 //
+\f0 \'d6\'b8\'b6\'a8\'c4\'a3\'d0\'cd\'ca\'fd\'be\'dd\'a3\'ac\'cf\'e0\'b5\'b1\'d3\'da
+\f3 request
+\f0 \'b5\'c4
+\f3 setAttribute
+\f0 \'b7\'bd\'b7\'a8\'a3\'ac\'d4\'da
+\f3 \ul jsp
+\f0 \ulnone \'d6\'d0\'bf\'c9\'d2\'d4\'d3\'c3
+\f3 itemsList
+\f0 \'c8\'a1\'b3\'f6\'ca\'fd\'be\'dd
+\f3 \cf0 \
+		\cf7 modelAndView\cf0 .addObject(\cf5 "itemsList"\cf0 ,\cf7 itemsList\cf0 ) ;\
+		\
+		\cf6 //
+\f0 \'d6\'b8\'b6\'a8\'ca\'d3\'cd\'bc
+\f3 ,web-\ul inf
+\f0 \ulnone \'b4\'b4\'bd\'a8
+\f3 \ul jsp
+\f0 \ulnone \'ca\'d3\'cd\'bc
+\f3 \cf0 \
+		\cf7 modelAndView\cf0 .setViewName(\cf5 "/WEB-INF/jsp/items/itemsList.jsp"\cf0 );\
+		\
+		
+\f2\b \cf3 return
+\f3\b0 \cf0  \cf7 modelAndView\cf0  ;\
+	\}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\
+\
+\
+3.
+\f0 \cf8 \'d7\'a2\'bd\'e2\'bf\'aa\'b7\'a2\'b5\'c4handler\'a3\'ac\'bb\'b9\'ca\'c7\'d2\'aa\'d4\'daspringmvc.xml\'d6\'d0\'c5\'e4\'d6\'c3\cf5 \
+\pard\pardeftab720\partightenfactor0
+
+\f3 \cf9 <!-- 
+\f0 \'c5\'e4\'d6\'c3\'d7\'a2\'bd\'e2\'bf\'aa\'b7\'a2\'b5\'c4\'b5\'da\'c8\'fd\'b8\'f6
+\f3 handler -->\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf10 <\cf11 bean\cf0  \cf12 class\cf0 =
+\f4\i \cf5 "cn.geepy.ssm.controller.ItemsController3"
+\f3\i0 \cf0  \cf10 />\
+
+\f0 \cf8 \'ca\'b5\'bc\'ca\'bf\'aa\'b7\'a2\'d6\'d0\'d2\'aa\'d0\'b4\'ba\'dc\'b6\'e0\'b5\'c4handler\'c5\'e4\'d6\'c3\'a3\'ac\'b2\'bb\'b7\'bd\'b1\'e3\'a3\'ac\'d2\'f2\'b4\'cb\'a3\'ac\'ca\'b9\'d3\'c3\'d7\'e9\'bc\'fe\'c9\'a8\'c3\'e8\'a3\'ba\cf10 \
+\pard\pardeftab720\partightenfactor0
+
+\f3 \cf9 <!-- 
+\f0 \'ca\'b5\'bc\'ca\'bf\'aa\'b7\'a2\'d6\'d0\'ca\'b9\'d3\'c3\'d7\'e9\'bc\'fe\'c9\'a8\'c3\'e8
+\f3 \cf0 \
+
+\f0 \cf9 \'bf\'c9\'d2\'d4\'c9\'a8\'c3\'e8
+\f3 handler
+\f0 \'a3\'ac
+\f3 service
+\f0 \'a1\'a3\'a1\'a3\'a1\'a3\'a1\'a3
+\f3 \cf0 \
+
+\f0 \cf9 \'d5\'e2\'c0\'ef\'d2\'aa\'c9\'a8\'c3\'e8\'b5\'c4\'ca\'c7
+\f3 controller
+\f0 \'a3\'ac\'d6\'b8\'b6\'a8
+\f3 controller
+\f0 \'b5\'c4\'b0\'fc
+\f3 \cf0 \
+\cf9  -->\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf10 <\cf11 context:component-scan\cf0  \cf12 base-package\cf0 =
+\f4\i \cf5 "cn.geepy.ssm.controller"
+\f3\i0 \cf10 ></\cf11 context:component-scan\cf10 >\cf0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf0 \'c7\'b0\'c3\'e6\'b5\'c4\'be\'cd\'bf\'c9\'d2\'d4\'c6\'c1\'b1\'ce\'c1\'cb}

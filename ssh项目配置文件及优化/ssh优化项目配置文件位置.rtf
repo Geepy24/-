@@ -1,0 +1,247 @@
+{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Menlo-Italic;
+}
+{\colortbl;\red255\green255\blue255;\red63\green95\blue191;\red0\green128\blue128;\red63\green127\blue127;
+\red127\green0\blue127;\red42\green0\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgenericrgb\c24706\c37255\c74902;\csgenericrgb\c0\c50196\c50196;\csgenericrgb\c24706\c49804\c49804;
+\csgenericrgb\c49804\c0\c49804;\csgenericrgb\c16471\c0\c100000;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww26900\viewh16280\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \'d3\'c5\'bb\'af\'c5\'e4\'d6\'c3\'ce\'c4\'bc\'feapplicationContext.xml,hibernate.cfg.xml,struts.xml\'a3\'ba\
+\'d2\'bb.\'bd\'abhibernate.cfg.xml\'c5\'e4\'d6\'c3\'b5\'bdapplicationContext.xml\'d6\'d0\
+applicationContext.xml\'d6\'d0\'d3\'ebhibernate.cfg.xml\'cf\'e0\'b9\'d8\'b5\'c4\'a3\'ba\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs28 \cf2 <!-- 
+\f0 \'c5\'e4\'d6\'c3SessionFactory
+\f1\fs30  -->\cf0 \
+	\cf3 <\cf4 bean\cf0  \cf5 id\cf0 =
+\f2\i \cf6 "sessionFactory"
+\f1\i0 \cf0  \cf5 class\cf0 =
+\f2\i \cf6 "org.springframework.orm.hibernate5.LocalSessionFactoryBean"
+\f1\i0 \cf3 >\cf0 \
+		\cf3 <\cf4 property\cf0  \cf5 name\cf0 =
+\f2\i \cf6 "configLocation"
+\f1\i0 \cf0  \cf5 value\cf0 =
+\f2\i \cf6 "classpath:hibernate.cfg.xml"
+\f1\i0 \cf3 ></\cf4 property\cf3 >\cf0 \
+		\
+	\cf3 </\cf4 bean\cf3 >
+\f0\fs16 \cf0 \
+
+\fs26 \'bd\'ab\'d6\'d0\'bc\'e4\'b5\'c4property\'c9\'be\'c8\'a5,\'b8\'c4\'ce\'aa\'c8\'fd\'b2\'bf\'b7\'d6\'c4\'d8\'d0\'c5\'cf\'a2\'a3\'ba\'c1\'ac\'bd\'d3\'ca\'fd\'be\'dd\'bf\'e2\'d0\'c5\'cf\'a2\'a3\'achibernate\'bf\'c9\'d1\'a1\'c5\'e4\'d6\'c3\'a3\'ac\'d3\'b3\'c9\'e4\'ce\'c4\'bc\'fe\'ce\'bb\'d6\'c3\
+\'c6\'e4\'ca\'b5\'be\'cd\'ca\'c7\'c5\'e4\'d6\'c3sessionFactory\
+\'d4\'ad\'c0\'b4\'b5\'c4sessionFactory\'d6\'d0\'b5\'c4property\'b1\'ea\'c7\'a9\'d6\'b8\'b6\'a8\'c1\'cbhibernate.cfg.xml\'b5\'c4\'ce\'bb\'d6\'c3\'a3\'ac\'cf\'d6\'d4\'da\'bd\'ab\'d5\'e2\'b8\'f6\'ce\'bb\'d6\'c3\'c9\'be\'b3\'fd\'a3\'ac\'c8\'bb\'ba\'f3\'c5\'e4\'d6\'c3\'b3\'c9\'cf\'ea\'cf\'b8\'d0\'c5\'cf\'a2
+\fs22 \
+
+\f1\fs30 \cf2 <!-- 
+\f0 \'c5\'e4\'d6\'c3
+\f1 sessionFactory -->\cf0 \
+	\cf3 <\cf4 bean\cf0  \cf5 id\cf0 =
+\f2\i \cf6 "sessionFactory"
+\f1\i0 \cf0  \cf5 class\cf0 =
+\f2\i \cf6 "org.springframework.orm.hibernate5.LocalSessionFactoryBean"
+\f1\i0 \cf3 >\cf0 \
+		\cf2 <!-- 
+\f0 \'c1\'ac\'bd\'d3\'ca\'fd\'be\'dd\'bf\'e2\'b5\'c4\'d0\'c5\'cf\'a2
+\f1  
+\f0 \'d3\'c3\'c1\'ac\'bd\'d3\'b3\'d8
+\f1 -->\cf0 \
+		\cf3 <\cf4 property\cf0  \cf5 name\cf0 =
+\f2\i \cf6 "dataSource"
+\f1\i0 \cf0  \cf5 ref\cf0 =
+\f2\i \cf6 "dataSource"
+\f1\i0 \cf3 ></\cf4 property\cf3 >\cf0 \
+		\cf2 <!-- \ul \ulc2 hibernate
+\f0 \ulnone \'b5\'c4\'bf\'c9\'d1\'a1\'c5\'e4\'d6\'c3
+\f1  -->\cf0 \
+		\cf3 <\cf4 property\cf0  \cf5 name\cf0 =
+\f2\i \cf6 "hibernateProperties"
+\f1\i0 \cf3 >\cf0 \
+			\cf3 <\cf4 props\cf3 >\cf0 \
+				\cf2 <!-- 
+\f0 \'ca\'fd\'be\'dd\'bf\'e2\'b5\'c4\'b7\'bd\'d1\'d4
+\f1  -->\cf0 \
+				\cf3 <\cf4 prop\cf0  \cf5 key\cf0 =
+\f2\i \cf6 "hibernate.dialect"
+\f1\i0 \cf3 >\cf0 org.hibernate.dialect.MySQLDialect\cf3 </\cf4 prop\cf3 >\cf0 \
+				\cf2 <!-- 
+\f0 \'ca\'c7\'b7\'f1\'cf\'d4\'ca\'be
+\f1 \ul hibernate
+\f0 \ulnone \'c9\'fa\'b3\'c9\'b5\'c4
+\f1 SQL
+\f0 \'d3\'ef\'be\'e4
+\f1  -->\cf0 \
+				\cf3 <\cf4 prop\cf0  \cf5 key\cf0 =
+\f2\i \cf6 "hibernate.show_sql"
+\f1\i0 \cf3 >\cf0 true\cf3 </\cf4 prop\cf3 >\cf0 \
+				\cf2 <!-- 
+\f0 \'ca\'c7\'b7\'f1\'ca\'b9\'d3\'c3\'b8\'f1\'ca\'bd\'bb\'af\'ca\'e4\'b3\'f6
+\f1 \ul sql
+\f0 \ulnone \'d3\'ef\'be\'e4\'b5\'bd\'bf\'d8\'d6\'c6\'cc\'a8
+\f1  -->\cf0 \
+				\cf3 <\cf4 prop\cf0  \cf5 key\cf0 =
+\f2\i \cf6 "hibernate.format_sql"
+\f1\i0 \cf3 >\cf0 false\cf3 </\cf4 prop\cf3 >\cf0 \
+				\cf2 <!-- 
+\f0 \'c5\'e4\'d6\'c3
+\f1 \ul hibernate
+\f0 \ulnone \'b2\'c9\'d3\'c3\'ba\'ce\'d6\'d6\'b7\'bd\'ca\'bd\'c9\'fa\'b3\'c9
+\f1 DDL
+\f0 \'d3\'ef\'be\'e4
+\f1  -->\cf0 \
+				\cf3 <\cf4 prop\cf0  \cf5 key\cf0 =
+\f2\i \cf6 "hibernate.hbm2ddl.auto"
+\f1\i0 \cf3 >\cf0 update\cf3 </\cf4 prop\cf3 >\cf0 \
+				\cf2 <!-- 
+\f0 \'b0\'d1
+\f1 session
+\f0 \'ba\'cd\'cf\'df\'b3\'cc\'b0\'f3\'b6\'a8\'a3\'ac\'b4\'d3\'b6\'f8\'ca\'b5\'cf\'d6\'d2\'bb\'b8\'f6\'cf\'df\'b3\'cc\'d6\'bb\'d3\'d0\'d2\'bb\'b8\'f6
+\f1 Session<prop key="hibernate.current_session_context_class">thread</prop> -->\cf0 \
+			\cf3 </\cf4 props\cf3 >\cf0 \
+		\cf3 </\cf4 property\cf3 >\cf0 \
+		\cf2 <!-- 
+\f0 \'d3\'b3\'c9\'e4\'ce\'c4\'bc\'fe\'b5\'c4\'ce\'bb\'d6\'c3
+\f1  -->\cf0 \
+		\cf3 <\cf4 property\cf0  \cf5 name\cf0 =
+\f2\i \cf6 "mappingLocations\'94
+\f1\i0 \cf3 >\cf0 \
+			\cf3 <\cf4 array\cf3 >\cf0 \
+				\cf3 <\cf4 value\cf3 >\cf0 classpath:com/\ul cm\ulnone /domain/*.hbm.xml\cf3 </\cf4 value\cf3 >\cf0 \
+			\cf3 </\cf4 array\cf3 >\cf0 \
+		\cf3 </\cf4 property\cf3 >\cf0 \
+	\cf3 </\cf4 bean\cf3 >\
+
+\f0\fs28 \cf0 \'d4\'d9\'bc\'d3\'c9\'cf\'c5\'e4\'d6\'c3\'c1\'ac\'bd\'d3\'b3\'d8\'b5\'c4\'d0\'c5\'cf\'a2\
+
+\f1\fs26 \cf2 <!-- 
+\f0 \'c5\'e4\'d6\'c3\'c1\'ac\'bd\'d3\'b3\'d8
+\f1  -->\cf0 \
+	\cf3 <\cf4 bean\cf0  \cf5 id\cf0 =
+\f2\i \cf6 "dataSource"
+\f1\i0 \cf0  \cf5 class\cf0 =
+\f2\i \cf6 "com.mchange.v2.c3p0.ComboPooledDataSource"
+\f1\i0 \cf3 >\cf0  \
+		\cf3 <\cf4 property\cf0  \cf5 name\cf0 =
+\f2\i \cf6 "driverClass"
+\f1\i0 \cf0  \cf5 value\cf0 =
+\f2\i \cf6 "com.mysql.jdbc.Driver"
+\f1\i0 \cf3 ></\cf4 property\cf3 >\cf0 \
+		\cf3 <\cf4 property\cf0  \cf5 name\cf0 =
+\f2\i \cf6 "jdbcUrl"
+\f1\i0 \cf0  \cf5 value\cf0 =
+\f2\i \cf6 "jdbc:mysql://localhost:3306/cm"
+\f1\i0 \cf3 ></\cf4 property\cf3 >\cf0 \
+		\cf3 <\cf4 property\cf0  \cf5 name\cf0 =
+\f2\i \cf6 "user"
+\f1\i0 \cf0  \cf5 value\cf0 =
+\f2\i \cf6 "root"
+\f1\i0 \cf3 ></\cf4 property\cf3 >\cf0 \
+		\cf3 <\cf4 property\cf0  \cf5 name\cf0 =
+\f2\i \cf6 "password"
+\f1\i0 \cf0  \cf5 value\cf0 =
+\f2\i \cf6 "123"
+\f1\i0 \cf3 ></\cf4 property\cf3 >\cf0 \
+	\cf3 </\cf4 bean\cf3 >
+\f0\fs16 \cf0 \
+  
+\fs30 \'b4\'cb\'ca\'b1\'bf\'c9\'c9\'be\'b3\'fdhibernate.cfg.xml\'c1\'cb\
+\
+\'b6\'fe.\'d3\'c5\'bb\'afapplicationContext.xml\'ce\'c4\'bc\'fe\'ce\'bb\'d6\'c3\'a3\'ac\'b4\'d3web-inf\'d6\'d0\'d7\'aa\'d2\'c6\
+	\'d4\'daweb.xml\'d6\'d0\'ca\'d6\'b6\'af\'d6\'b8\'b6\'a8spring\'b5\'c4\'c5\'e4\'d6\'c3\'ce\'c4\'bc\'fe\'ce\'bb\'d6\'c3\'a3\'ac\'d0\'e8\'d2\'aa\'ca\'b9\'d3\'c3servletContext\'b5\'c4\'b3\'f5\'ca\'bc\'bb\'af\'b2\'ce\'ca\'fd\
+	web.xml\'d6\'d0\'cc\'ed\'bc\'d3\'a3\'ba\
+
+\f1\fs32 \cf2 <!-- 
+\f0 \'ca\'d6\'b6\'af\'d6\'b8\'b6\'a8
+\f1 spring
+\f0 \'b5\'c4\'c5\'e4\'d6\'c3\'ce\'c4\'bc\'fe\'ce\'bb\'d6\'c3\'a3\'ac\'d0\'e8\'d2\'aa\'ca\'b9\'d3\'c3
+\f1 servletContext
+\f0 \'b5\'c4\'b3\'f5\'ca\'bc\'bb\'af\'b2\'ce\'ca\'fd
+\f1  -->\cf0 \
+  \cf2 <!-- \ul param\ulnone -name
+\f0 \'d3\'d0\'d6\'b8\'b6\'a8\'d6\'b5
+\f1  -->\cf0 \
+  \cf3 <\cf4 context-param\cf3 >\cf0 \
+  	\cf3 <\cf4 param-name\cf3 >\cf0 contextConfigLocation\cf3 </\cf4 param-name\cf3 >\cf0 \
+  	\cf3 <\cf4 param-value\cf3 >\cf0 classpath:config/spring/applicationContext.xml\cf3 </\cf4 param-value\cf3 >\cf0 \
+  \cf3 </\cf4 context-param\cf3 >
+\f0\fs30 \cf0 \
+\'bc\'b4\'bf\'c9\'bd\'ab
+\f1\fs32 applicationContext.xml
+\f0 \'b7\'c5\'b5\'bd
+\f1 config
+\f0 .
+\f1 spring
+\f0 \'b0\'fc\'cf\'c2\'c1\'cb\
+\
+\'c8\'fd.\'d3\'c5\'bb\'afstruts2\'b5\'c4\'c5\'e4\'d6\'c3\'ce\'c4\'bc\'fe\'ce\'bb\'d6\'c3\
+	struts.xml\'ca\'c7\'d3\'c9struts2\'b5\'c4\'ba\'cb\'d0\'c4\'b9\'fd\'c2\'cb\'c6\'f7\'bc\'d3\'d4\'d8\'b5\'c4\'a3\'ac\'d4\'daweb.xml\'d6\'d0:\
+
+\f1 \cf2 <!-- struts2
+\f0 \'b5\'c4\'ba\'cb\'d0\'c4\'b9\'fd\'c2\'cb\'c6\'f7
+\f1  -->\cf0 \
+  \cf3 <\cf4 filter\cf3 >\cf0 \
+    \cf3 <\cf4 filter-name\cf3 >\cf0 struts2\cf3 </\cf4 filter-name\cf3 >\cf0 \
+    \cf3 <\cf4 filter-class\cf3 >\cf0 org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter\cf3 </\cf4 filter-class\cf3 >\cf0 \
+    \cf3 <\cf4 init-param\cf3 >\cf0 \
+      \cf3 <\cf4 param-name\cf3 >\cf0 struts.devMode\cf3 </\cf4 param-name\cf3 >\cf0 \
+      \cf3 <\cf4 param-value\cf3 >\cf0 true\cf3 </\cf4 param-value\cf3 >\cf0 \
+    \cf3 </\cf4 init-param\cf3 >\cf0 \
+  \cf3 </\cf4 filter\cf3 >\cf0 \
+  \
+  \cf3 <\cf4 filter-mapping\cf3 >\cf0 \
+    \cf3 <\cf4 filter-name\cf3 >\cf0 struts2\cf3 </\cf4 filter-name\cf3 >\cf0 \
+    \cf3 <\cf4 url-pattern\cf3 >\cf0 /*\cf3 </\cf4 url-pattern\cf3 >\cf0 \
+  \cf3 </\cf4 filter-mapping\cf3 >\
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf7 \'c0\'ef\'c3\'e6\'d2\'d1\'be\'ad\'d3\'d0\'d2\'bb\'b8\'f6init-param\'c1\'cb\'a3\'ac\'d4\'d9\'cc\'ed\'bc\'d3\'d2\'bb\'d7\'e9\'a3\'ba\cf3 \
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf3 <\cf4 init-param\cf3 >\cf0 \
+      \cf3 <\cf4 param-name\cf3 >\cf0 \ul \ulc0 config\cf3 \ulnone </\cf4 param-name\cf3 >\cf0 \
+      \cf3 <\cf4 param-value\cf3 >\cf0 struts-default.xml,struts-plugin.xml,\ul config\ulnone /struts/struts.xml\cf3 </\cf4 param-value\cf3 >\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf3 </\cf4 init-param\cf3 >\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf7 \'d7\'a2\'d2\'e2\'a3\'ac\'d6\'bb\'c4\'dc\'b8\'fc\'b8\'c4\'b5\'da\'b6\'fe\'b8\'f6\'b6\'ba\'ba\'c5\'ba\'f3\'b5\'c4\'d6\'b5\'a3\'ac\'b4\'cb\'ca\'b1\'be\'cd\'bf\'c9\'d2\'d4\'bd\'abstruts.xml\'d2\'c6\'b6\'af\'b5\'bdconfig.struts\'b0\'fc\'cf\'c2\
+\
+\'cb\'c4.\'b7\'d6\'c5\'e4\'d6\'c3\'ce\'c4\'bc\'fe\'b1\'e0\'d0\'b4spring\'ba\'c8struts2\'b5\'c4\'c5\'e4\'d6\'c3\'ce\'c4\'bc\'fe\
+1.\'c0\'fd\'a3\'ba\'bd\'abapplicationContext.xml\'d6\'d0\'b5\'c4dao\'b2\'bf\'b7\'d6\'c4\'da\'c8\'dd\'d0\'b4\'b3\'f6\'c8\'a5\'a3\'a8\'d3\'eb\'ca\'fd\'be\'dd\'bf\'e2\'cf\'e0\'b9\'d8\'b5\'c4\'a3\'a9\'a3\'ac\'c8\'bb\'ba\'f3\'d4\'daapplicationContext.xml\'d6\'d0\'d2\'fd\'c8\'eb\'b7\'d6\'b3\'f6\'c8\'a5\'b5\'c4\'c5\'e4\'d6\'c3\'ce\'c4\'bc\'fe\
+	\'d2\'fd\'c8\'eb\'c6\'e4\'cb\'fbspring\'c5\'e4\'d6\'c3\'ce\'c4\'bc\'fe\'a3\'baapplicationContext.xml\'d6\'d0\'a3\'ba\
+	
+\f1 \cf2 <!-- 
+\f0 \'d2\'fd\'c8\'eb\'c6\'e4\'cb\'fb
+\f1 spring
+\f0 \'c5\'e4\'d6\'c3\'ce\'c4\'bc\'fe
+\f1  -->\cf0 \
+	\cf3 <\cf4 import\cf0  \cf5 resource\cf0 =
+\f2\i \cf6 "applicationContext-dao.xml"
+\f1\i0 \cf0  \cf3 />
+\f0 \cf7 \
+	\'d3\'ebdao\'b2\'e3\'d3\'d0\'b9\'d8\'b5\'c4\'c5\'e4\'d6\'c3\'d3\'d0\'a3\'ba\
+	
+\f1 \cf2 hibernateTemplat
+\f0 \'a3\'ac
+\f1 sessionFactory
+\f0 \'a3\'ac\'c1\'ac\'bd\'d3\'b3\'d8
+\f2\i \cf6 dataSource
+\f0\i0 \cf7 \
+\
+	\'b4\'cb\'ca\'b1\'a3\'ac\'bf\'c9\'c9\'be\'b3\'fdapplicationContext.xml\'d6\'d0\'b9\'d8\'d3\'dadao\'b5\'c4\'c5\'e4\'d6\'c3\
+\
+2.struts.xml\'d6\'d0\'a3\'ac\'bf\'c9\'d2\'d4\'c0\'e0\'cb\'c6\'b5\'c4\'d2\'fd\'c8\'eb\'c6\'e4\'cb\'fbstruts2\'c5\'e4\'d6\'c3\'ce\'c4\'bc\'fe\
+	
+\f1 \cf3 <\cf4 include\cf0  \cf5 file\cf0 =
+\f2\i \cf6 "config/struts/struts-xxx.xml"
+\f1\i0 \cf0  \cf3 ></\cf4 include\cf3 >\
+
+\f0 \'d7\'a2\'d2\'e2\'a3\'ac\'d5\'e2\'b8\'f6\'d2\'aa\'d0\'b4\'cd\'ea\'d5\'fb\'b5\'c4\'c2\'b7\'be\'b6\'a3\'ac\'b0\'fc\'c3\'fb\'a1\'a3\'a1\'a3\'a1\'a3/\'ce\'c4\'bc\'fe\'c3\'fb\cf7 \
+\
+\
+\
+\cf3 \
+}

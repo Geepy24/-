@@ -1,0 +1,388 @@
+{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Menlo-Italic;
+\f3\fswiss\fcharset0 Helvetica;\f4\fnil\fcharset134 STSongti-SC-Regular;\f5\froman\fcharset0 Times-Roman;
+}
+{\colortbl;\red255\green255\blue255;\red0\green128\blue128;\red63\green127\blue127;\red127\green0\blue127;
+\red42\green0\blue255;\red63\green95\blue191;\red0\green0\blue0;\red14\green110\blue109;\red207\green207\blue207;
+\red50\green109\blue108;\red179\green179\blue179;\red106\green0\blue108;\red29\green0\blue255;\red251\green2\blue7;
+}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c50196\c50196;\csgenericrgb\c24706\c49804\c49804;\csgenericrgb\c49804\c0\c49804;
+\csgenericrgb\c16471\c0\c100000;\csgenericrgb\c24706\c37255\c74902;\cssrgb\c0\c0\c0;\cssrgb\c0\c50196\c50196;\cssrgb\c84706\c84706\c84706;
+\cssrgb\c24706\c49804\c49804;\cssrgb\c75294\c75294\c75294;\cssrgb\c49804\c0\c49804;\cssrgb\c16471\c0\c100000;\cssrgb\c100000\c14913\c0;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs32 \cf0 \'d2\'bb.spring\'d5\'fb\'ba\'cfmybatis \
+1.\'d0\'e8\'d2\'aaspring\'cd\'a8\'b9\'fd\'b5\'a5\'c0\'fd\'b5\'c4\'b7\'bd\'ca\'bd\'b9\'dc\'c0\'edSqlSessionFactory\'a1\'a3\
+\
+2.Spring\'ba\'cdmybatis\'d5\'fb\'ba\'cf\'c9\'fa\'b3\'c9\'b4\'fa\'c0\'ed\'b6\'d4\'cf\'f3\'a3\'ac\'ca\'b9\'d3\'c3SqlSessionFactory\'b4\'b4\'bd\'a8SqlSession\'a1\'a3\'a3\'a8spring\'ba\'cdmybatis\'d5\'fb\'ba\'cf\'d7\'d4\'b6\'af\'cd\'ea\'b3\'c9\'a3\'a9\
+\
+3.\'b3\'d6\'be\'c3\'b2\'e3\'b5\'c4mapper\'b6\'bc\'d0\'e8\'d2\'aaspring\'bd\'f8\'d0\'d0\'b9\'dc\'c0\'ed\
+\
+\'b6\'fe.\'d5\'fb\'ba\'cf\'bb\'b7\'be\'b3 pom\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 <\cf3 project\cf0  \cf4 xmlns\cf0 =
+\f2\i \cf5 "http://maven.apache.org/POM/4.0.0"
+\f1\i0 \cf0 \
+	\cf4 xmlns:xsi\cf0 =
+\f2\i \cf5 "http://www.w3.org/2001/XMLSchema-instance"
+\f1\i0 \cf0 \
+	\cf4 xsi:schemaLocation\cf0 =
+\f2\i \cf5 "http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+\f1\i0 \cf2 >\cf0 \
+	\cf2 <\cf3 modelVersion\cf2 >\cf0 4.0.0\cf2 </\cf3 modelVersion\cf2 >\cf0 \
+	\cf2 <\cf3 groupId\cf2 >\cf0 cn.geepy\cf2 </\cf3 groupId\cf2 >\cf0 \
+	\cf2 <\cf3 artifactId\cf2 >\cf0 spring_mybatis\cf2 </\cf3 artifactId\cf2 >\cf0 \
+	\cf2 <\cf3 version\cf2 >\cf0 0.0.1-SNAPSHOT\cf2 </\cf3 version\cf2 >\cf0 \
+\
+\
+	\cf2 <\cf3 dependencies\cf2 >\cf0 \
+		\cf6 <!--spring
+\f0 \'d2\'c0\'c0\'b5
+\f1  -->\cf0 \
+		\cf2 <\cf3 dependency\cf2 >\cf0 \
+			\cf2 <\cf3 groupId\cf2 >\cf0 org.springframework\cf2 </\cf3 groupId\cf2 >\cf0 \
+			\cf2 <\cf3 artifactId\cf2 >\cf0 spring-core\cf2 </\cf3 artifactId\cf2 >\cf0 \
+			\cf2 <\cf3 version\cf2 >\cf0 4.3.2.RELEASE\cf2 </\cf3 version\cf2 >\cf0 \
+		\cf2 </\cf3 dependency\cf2 >\cf0 \
+		\cf2 <\cf3 dependency\cf2 >\cf0 \
+			\cf2 <\cf3 groupId\cf2 >\cf0 org.springframework\cf2 </\cf3 groupId\cf2 >\cf0 \
+			\cf2 <\cf3 artifactId\cf2 >\cf0 spring-context\cf2 </\cf3 artifactId\cf2 >\cf0 \
+			\cf2 <\cf3 version\cf2 >\cf0 4.3.2.RELEASE\cf2 </\cf3 version\cf2 >\cf0 \
+		\cf2 </\cf3 dependency\cf2 >\cf0 \
+		\cf2 <\cf3 dependency\cf2 >\cf0 \
+			\cf2 <\cf3 groupId\cf2 >\cf0 org.springframework\cf2 </\cf3 groupId\cf2 >\cf0 \
+			\cf2 <\cf3 artifactId\cf2 >\cf0 spring-test\cf2 </\cf3 artifactId\cf2 >\cf0 \
+			\cf2 <\cf3 version\cf2 >\cf0 4.3.2.RELEASE\cf2 </\cf3 version\cf2 >\cf0 \
+		\cf2 </\cf3 dependency\cf2 >\cf0 \
+		\cf2 <\cf3 dependency\cf2 >\cf0 \
+			\cf2 <\cf3 groupId\cf2 >\cf0 org.springframework\cf2 </\cf3 groupId\cf2 >\cf0 \
+			\cf2 <\cf3 artifactId\cf2 >\cf0 spring-tx\cf2 </\cf3 artifactId\cf2 >\cf0 \
+			\cf2 <\cf3 version\cf2 >\cf0 4.3.2.RELEASE\cf2 </\cf3 version\cf2 >\cf0 \
+		\cf2 </\cf3 dependency\cf2 >\cf0 \
+		\cf2 <\cf3 dependency\cf2 >\cf0 \
+			\cf2 <\cf3 groupId\cf2 >\cf0 org.springframework\cf2 </\cf3 groupId\cf2 >\cf0 \
+			\cf2 <\cf3 artifactId\cf2 >\cf0 spring-beans\cf2 </\cf3 artifactId\cf2 >\cf0 \
+			\cf2 <\cf3 version\cf2 >\cf0 4.3.2.RELEASE\cf2 </\cf3 version\cf2 >\cf0 \
+		\cf2 </\cf3 dependency\cf2 >\cf0 \
+		\cf2 <\cf3 dependency\cf2 >\cf0 \
+			\cf2 <\cf3 groupId\cf2 >\cf0 org.springframework\cf2 </\cf3 groupId\cf2 >\cf0 \
+			\cf2 <\cf3 artifactId\cf2 >\cf0 spring-jdbc\cf2 </\cf3 artifactId\cf2 >\cf0 \
+			\cf2 <\cf3 version\cf2 >\cf0 4.3.2.RELEASE\cf2 </\cf3 version\cf2 >\cf0 \
+		\cf2 </\cf3 dependency\cf2 >\cf0 \
+		\cf6 <!-- \ul mybatis
+\f0 \ulnone \'d2\'c0\'c0\'b5
+\f1  -->\cf0 \
+		\cf2 <\cf3 dependency\cf2 >\cf0 \
+			\cf2 <\cf3 groupId\cf2 >\cf0 org.mybatis\cf2 </\cf3 groupId\cf2 >\cf0 \
+			\cf2 <\cf3 artifactId\cf2 >\cf0 mybatis\cf2 </\cf3 artifactId\cf2 >\cf0 \
+			\cf2 <\cf3 version\cf2 >\cf0 3.2.8\cf2 </\cf3 version\cf2 >\cf0 \
+		\cf2 </\cf3 dependency\cf2 >\cf0 \
+		\cf2 <\cf3 dependency\cf2 >\cf0 \
+			\cf2 <\cf3 groupId\cf2 >\cf0 org.mybatis\cf2 </\cf3 groupId\cf2 >\cf0 \
+			\cf2 <\cf3 artifactId\cf2 >\cf0 mybatis-spring\cf2 </\cf3 artifactId\cf2 >\cf0 \
+			\cf2 <\cf3 version\cf2 >\cf0 1.3.0\cf2 </\cf3 version\cf2 >\cf0 \
+		\cf2 </\cf3 dependency\cf2 >\cf0 \
+		\cf6 <!-- \ul mysql\ulnone  -->\cf0 \
+		\cf2 <\cf3 dependency\cf2 >\cf0 \
+			\cf2 <\cf3 groupId\cf2 >\cf0 mysql\cf2 </\cf3 groupId\cf2 >\cf0 \
+			\cf2 <\cf3 artifactId\cf2 >\cf0 mysql-connector-java\cf2 </\cf3 artifactId\cf2 >\cf0 \
+			\cf2 <\cf3 version\cf2 >\cf0 5.1.38\cf2 </\cf3 version\cf2 >\cf0 \
+		\cf2 </\cf3 dependency\cf2 >\cf0 \
+		\cf6 <!--
+\f0 \'c6\'e4\'cb\'fb\'b5\'c4\'bb\'f9\'b1\'be\'c5\'e4\'d6\'c3\'a3\'ac\'c8\'d5\'d6\'be\'a1\'a2\'b5\'a5\'d4\'aa\'b2\'e2\'ca\'d4\'a1\'a2
+\f1 \ul jdbc\ulnone \'97\'97jar
+\f0 \'b0\'fc
+\f1  -->\cf0 \
+		\cf2 <\cf3 dependency\cf2 >\cf0 \
+			\cf2 <\cf3 groupId\cf2 >\cf0 junit\cf2 </\cf3 groupId\cf2 >\cf0 \
+			\cf2 <\cf3 artifactId\cf2 >\cf0 junit\cf2 </\cf3 artifactId\cf2 >\cf0 \
+			\cf2 <\cf3 version\cf2 >\cf0 4.12\cf2 </\cf3 version\cf2 >\cf0 \
+		\cf2 </\cf3 dependency\cf2 >\cf0 \
+		\cf2 <\cf3 dependency\cf2 >\cf0 \
+			\cf2 <\cf3 groupId\cf2 >\cf0 org.slf4j\cf2 </\cf3 groupId\cf2 >\cf0 \
+			\cf2 <\cf3 artifactId\cf2 >\cf0 slf4j-api\cf2 </\cf3 artifactId\cf2 >\cf0 \
+			\cf2 <\cf3 version\cf2 >\cf0 1.7.12\cf2 </\cf3 version\cf2 >\cf0 \
+		\cf2 </\cf3 dependency\cf2 >\cf0 \
+		\cf2 <\cf3 dependency\cf2 >\cf0 \
+			\cf2 <\cf3 groupId\cf2 >\cf0 org.slf4j\cf2 </\cf3 groupId\cf2 >\cf0 \
+			\cf2 <\cf3 artifactId\cf2 >\cf0 slf4j-log4j12\cf2 </\cf3 artifactId\cf2 >\cf0 \
+			\cf2 <\cf3 version\cf2 >\cf0 1.7.12\cf2 </\cf3 version\cf2 >\cf0 \
+		\cf2 </\cf3 dependency\cf2 >\cf0 \
+		\cf2 <\cf3 dependency\cf2 >\cf0 \
+			\cf2 <\cf3 groupId\cf2 >\cf0 log4j\cf2 </\cf3 groupId\cf2 >\cf0 \
+			\cf2 <\cf3 artifactId\cf2 >\cf0 log4j\cf2 </\cf3 artifactId\cf2 >\cf0 \
+			\cf2 <\cf3 version\cf2 >\cf0 1.2.17\cf2 </\cf3 version\cf2 >\cf0 \
+		\cf2 </\cf3 dependency\cf2 >\cf0 \
+		\cf6 <!-- \ul ehcache
+\f0 \ulnone \'ba\'cb\'d0\'c4
+\f1 jar
+\f0 \'b0\'fc
+\f1  -->\cf0 \
+		\cf2 <\cf3 dependency\cf2 >\cf0 \
+			\cf2 <\cf3 groupId\cf2 >\cf0 net.sf.ehcache\cf2 </\cf3 groupId\cf2 >\cf0 \
+			\cf2 <\cf3 artifactId\cf2 >\cf0 ehcache-core\cf2 </\cf3 artifactId\cf2 >\cf0 \
+			\cf2 <\cf3 version\cf2 >\cf0 2.6.11\cf2 </\cf3 version\cf2 >\cf0 \
+		\cf2 </\cf3 dependency\cf2 >\cf0 \
+		\cf6 <!-- MyBatis
+\f0 \'d3\'eb
+\f1 \ul ehcache
+\f0 \ulnone \'d5\'fb\'ba\'cf
+\f1 jar
+\f0 \'b0\'fc
+\f1  -->\cf0 \
+		\cf2 <\cf3 dependency\cf2 >\cf0 \
+			\cf2 <\cf3 groupId\cf2 >\cf0 org.mybatis.caches\cf2 </\cf3 groupId\cf2 >\cf0 \
+			\cf2 <\cf3 artifactId\cf2 >\cf0 mybatis-ehcache\cf2 </\cf3 artifactId\cf2 >\cf0 \
+			\cf2 <\cf3 version\cf2 >\cf0 1.1.0\cf2 </\cf3 version\cf2 >\cf0 \
+		\cf2 </\cf3 dependency\cf2 >\cf0 \
+	\cf2 </\cf3 dependencies\cf2 >\cf0 \
+	\cf6 <!--
+\f0 \'c5\'e4\'d6\'c3\'b1\'e0\'d2\'eb\'d4\'b4\'b4\'fa\'c2\'eb\'b5\'c4
+\f1 \ul jdk
+\f0 \ulnone \'b0\'e6\'b1\'be
+\f1  -->\cf0 \
+	\cf2 <\cf3 build\cf2 >\cf0 \
+		\cf2 <\cf3 plugins\cf2 >\cf0 \
+			\cf2 <\cf3 plugin\cf2 >\cf0 \
+				\cf2 <\cf3 artifactId\cf2 >\cf0 maven-compiler-plugin\cf2 </\cf3 artifactId\cf2 >\cf0 \
+				\cf2 <\cf3 configuration\cf2 >\cf0 \
+					\cf2 <\cf3 source\cf2 >\cf0 1.8\cf2 </\cf3 source\cf2 >\cf0 \
+					\cf2 <\cf3 target\cf2 >\cf0 1.8\cf2 </\cf3 target\cf2 >\cf0 \
+				\cf2 </\cf3 configuration\cf2 >\cf0 \
+			\cf2 </\cf3 plugin\cf2 >\cf0 \
+		\cf2 </\cf3 plugins\cf2 >\cf0 \
+		\cf2 <\cf3 resources\cf2 >\cf0 \
+			\cf2 <\cf3 resource\cf2 >\cf0 \
+				\cf2 <\cf3 directory\cf2 >\cf0 src/main/java\cf2 </\cf3 directory\cf2 >\cf0 \
+				\cf2 <\cf3 includes\cf2 >\cf0 \
+					\cf2 <\cf3 include\cf2 >\cf0 **/*.properties\cf2 </\cf3 include\cf2 >\cf0 \
+					\cf2 <\cf3 include\cf2 >\cf0 **.*.xml\cf2 </\cf3 include\cf2 >\cf0 \
+					\cf2 <\cf3 include\cf2 >\cf0 **/*.xml\cf2 </\cf3 include\cf2 >\cf0 \
+				\cf2 </\cf3 includes\cf2 >\cf0 \
+			\cf2 </\cf3 resource\cf2 >\cf0 \
+			\cf2 <\cf3 resource\cf2 >\cf0 \
+				\cf2 <\cf3 directory\cf2 >\cf0 src/main/resources\cf2 </\cf3 directory\cf2 >\cf0 \
+				\cf2 <\cf3 includes\cf2 >\cf0 \
+					\cf2 <\cf3 include\cf2 >\cf0 **/*.xml\cf2 </\cf3 include\cf2 >\cf0 \
+				\cf2 </\cf3 includes\cf2 >\cf0 \
+			\cf2 </\cf3 resource\cf2 >\cf0 \
+		\cf2 </\cf3 resources\cf2 >\cf0 \
+	\cf2 </\cf3 build\cf2 >\cf0 \
+\
+\
+\cf2 </\cf3 project\cf2 >
+\f0 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \
+\'d0\'b4\'ba\'c3pom\'d6\'ae\'ba\'f3\'a3\'ac\'bd\'ab\'c5\'e4\'d6\'c3\'ce\'c4\'bc\'fe\'d7\'bc\'b1\'b8\'ba\'c3\'a3\'ba\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 {{\NeXTGraphic Pasted Graphic.tiff \width4900 \height2940 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs32 \cf0 \
+applicationContext.xml\'ce\'c4\'bc\'fe\'cd\'b7\'a3\'ba\
+\pard\pardeftab720\sl400\qj\partightenfactor0
+
+\f4\fs28 \cf7 \expnd0\expndtw0\kerning0
+\'d4\'daclasspath\'cf\'c2\'b4\'b4\'bd\'a8
+\f5 applicationContext.xml
+\f4 \'a3\'ac\'b6\'a8\'d2\'e5\'ca\'fd\'be\'dd\'bf\'e2\'c1\'b4\'bd\'d3\'b3\'d8\'a1\'a2
+\f5 SqlSessionFactory
+\f4 \'a1\'a3
+\f5 \
+\pard\pardeftab720\sl340\qj\partightenfactor0
+\cf7 \'a0\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\fs32 \cf8 \cb9 <\cf10 \cb11 beans\cf7 \cb9 \'a0\cf12 xmlns\cf7 =
+\i \cf13 "http://www.springframework.org/schema/beans"
+\i0\fs28 \cf7 \
+
+\fs32 \cf12 xmlns:xsi\cf7 =
+\i \cf13 "http://www.w3.org/2001/XMLSchema-instance"
+\i0 \cf7 \'a0\cf12 xmlns:mvc\cf7 =
+\i \cf13 "http://www.springframework.org/schema/mvc"
+\i0\fs28 \cf7 \
+
+\fs32 \cf12 xmlns:context\cf7 =
+\i \cf13 "http://www.springframework.org/schema/context"
+\i0\fs28 \cf7 \
+
+\fs32 \cf12 xmlns:aop\cf7 =
+\i \cf13 "http://www.springframework.org/schema/aop"
+\i0 \cf7 \'a0\cf12 xmlns:tx\cf7 =
+\i \cf13 "http://www.springframework.org/schema/tx"
+\i0\fs28 \cf7 \
+
+\fs32 \cf12 xsi:schemaLocation\cf7 =
+\i \cf13 "http://www.springframework.org/schema/beans 
+\i0\fs28 \cf7 \
+
+\i\fs32 \cf13 http://www.springframework.org/schema/beans/spring-beans-3.
+\f4\i0 2
+\f5\i .xsd 
+\i0\fs28 \cf7 \
+
+\i\fs32 \cf13 http://www.springframework.org/schema/mvc 
+\i0\fs28 \cf7 \
+
+\i\fs32 \cf13 http://www.springframework.org/schema/mvc/spring-mvc-3.
+\f4\i0 2
+\f5\i .xsd 
+\i0\fs28 \cf7 \
+
+\i\fs32 \cf13 http://www.springframework.org/schema/context 
+\i0\fs28 \cf7 \
+
+\i\fs32 \cf13 http://www.springframework.org/schema/context/spring-context-3.
+\f4\i0 2
+\f5\i .xsd 
+\i0\fs28 \cf7 \
+
+\i\fs32 \cf13 http://www.springframework.org/schema/aop 
+\i0\fs28 \cf7 \
+
+\i\fs32 \cf13 http://www.springframework.org/schema/aop/spring-aop-3.
+\f4\i0 2
+\f5\i .xsd 
+\i0\fs28 \cf7 \
+
+\i\fs32 \cf13 http://www.springframework.org/schema/tx 
+\i0\fs28 \cf7 \
+\pard\pardeftab720\sl360\qj\partightenfactor0
+
+\i\fs32 \cf13 \cb1 http://www.springframework.org/schema/tx/spring-tx-3.
+\f4\i0 2
+\f5\i .xsd "
+\i0 \cf8 >
+\fs28 \cf7 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs32 \cf0 \kerning1\expnd0\expndtw0 \
+\
+\'c8\'fd.SqlSessionFactory\'b5\'c4\'c5\'e4\'d6\'c3\
+\'d4\'da\cf14 appliactionContext.xml\'d6\'d0\cf0 \'c5\'e4\'d6\'c3sqlSessionFactory\
+sqlSessionFactory\'d4\'damybatis\'ba\'cdspring\'b5\'c4\'d5\'fb\'ba\'cf\'b0\'fc\'cf\'c2\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f3\fs24 \cf0 {{\NeXTGraphic Pasted Graphic 1.tiff \width5900 \height6280 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs32 \cf0 \'bf\'bd\'b1\'b4\'c2\'b7\'be\'b6
+\f2\i \cf5 "org.mybatis.spring.SqlSessionFactoryBean"\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\i0 \cf5 \'d7\'a2\'d2\'e2\'c3\'bb\'d3\'d0.class\'ba\'f3\'d7\'ba
+\f2\i \
+
+\f0\i0 \cf7 \'c5\'e4\'d6\'c3\'ca\'fd\'be\'dd\'d4\'b4\'a3\'a8\'c5\'e4\'d6\'c3sqlSessionFactory\'d6\'d0\'d0\'e8\'d2\'aa\'ca\'fd\'be\'dd\'d4\'b4\'a3\'a9\'a3\'ac\'ca\'b9\'d3\'c3dbpc\'a3\'ba\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf2 <\cf3 dependency\cf2 >\cf0 \
+			\ul <groupId>commons-dbcp</groupId>\ulnone \
+\pard\pardeftab720\partightenfactor0
+\cf0 \ul \ulc0 			<artifactId>commons-dbcp</artifactId>\ulnone \
+\ul 			<version>1.4</version>\ulnone \
+\pard\pardeftab720\partightenfactor0
+\cf2 </\cf3 dependency\cf2 >
+\f0 \cf7 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf7 \'bc\'d3\'d4\'d8\'c5\'e4\'d6\'c3\'ce\'c4\'bc\'fe\'a3\'a8\'ca\'fd\'be\'dd\'d4\'b4\'d0\'e8\'d2\'aa\'a3\'ac\'c0\'ef\'c3\'e6\'ca\'c7url\'a3\'acusername\'a3\'acpassword\'b5\'c8\'a3\'a9\
+\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1 \cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf6 <!-- 
+\f0 \'bc\'d3\'d4\'d8\'c5\'e4\'d6\'c3\'ce\'c4\'bc\'fe
+\f1  -->\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf2 <\cf3 context:property-placeholder\cf0  \cf4 location\cf0 =
+\f2\i \cf5 "classpath:db.properties"
+\f1\i0 \cf2 />\cf0 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf6 <!-- 
+\f0 \'c5\'e4\'d6\'c3\'ca\'fd\'be\'dd\'d4\'b4\'a3\'ac\'ca\'b9\'d3\'c3
+\f1 \ul dbcp\ulnone  -->\cf0 \
+	\cf2 <\cf3 bean\cf0  \cf4 id\cf0 =
+\f2\i \cf5 "dataSource"
+\f1\i0 \cf0  \cf4 class\cf0 =
+\f2\i \cf5 "org.apache.commons.dbcp.BasicDataSource"
+\f1\i0 \cf0 \
+		\cf4 destroy-method\cf0 =
+\f2\i \cf5 "close"
+\f1\i0 \cf2 >\cf0 \
+		\cf2 <\cf3 property\cf0  \cf4 name\cf0 =
+\f2\i \cf5 "driverClassName"
+\f1\i0 \cf0  \cf4 value\cf0 =
+\f2\i \cf5 "$\{jdbc.driver\}"
+\f1\i0 \cf2 />\cf0 \
+		\cf2 <\cf3 property\cf0  \cf4 name\cf0 =
+\f2\i \cf5 "url"
+\f1\i0 \cf0  \cf4 value\cf0 =
+\f2\i \cf5 "$\{jdbc.url\}"
+\f1\i0 \cf2 />\cf0 \
+		\cf2 <\cf3 property\cf0  \cf4 name\cf0 =
+\f2\i \cf5 "username"
+\f1\i0 \cf0  \cf4 value\cf0 =
+\f2\i \cf5 "$\{jdbc.username\}"
+\f1\i0 \cf2 />\cf0 \
+		\cf2 <\cf3 property\cf0  \cf4 name\cf0 =
+\f2\i \cf5 "password"
+\f1\i0 \cf0  \cf4 value\cf0 =
+\f2\i \cf5 "$\{jdbc.password\}"
+\f1\i0 \cf2 />\cf0 \
+		\cf2 <\cf3 property\cf0  \cf4 name\cf0 =
+\f2\i \cf5 "maxActive"
+\f1\i0 \cf0  \cf4 value\cf0 =
+\f2\i \cf5 "10"
+\f1\i0 \cf2 />\cf0 \
+		\cf2 <\cf3 property\cf0  \cf4 name\cf0 =
+\f2\i \cf5 "maxIdle"
+\f1\i0 \cf0  \cf4 value\cf0 =
+\f2\i \cf5 "5"
+\f1\i0 \cf2 />\cf0 \
+	\cf2 </\cf3 bean\cf2 >\cf0 \
+\cf6 <!-- 
+\f0 \'c5\'e4\'d6\'c3
+\f1 sqlSessionFactory -->\cf0 \
+	\cf2 <\cf3 bean\cf0  \cf4 id\cf0 =
+\f2\i \cf5 "sqlSessionFactory"
+\f1\i0 \cf0  \cf4 class\cf0 =
+\f2\i \cf5 "org.mybatis.spring.SqlSessionFactoryBean"
+\f1\i0 \cf2 >\cf0 \
+		\cf6 <!-- 
+\f0 \'bc\'d3\'d4\'d8
+\f1 \ul mybatis
+\f0 \ulnone \'b5\'c4\'c5\'e4\'d6\'c3\'ce\'c4\'bc\'fe
+\f1  -->\cf0 \
+		\cf2 <\cf3 property\cf0  \cf4 name\cf0 =
+\f2\i \cf5 "configLocation"
+\f1\i0 \cf0  \cf4 value\cf0 =
+\f2\i \cf5 "SqlMapConfig.xml"
+\f1\i0 \cf0  \cf2 />\cf0 \
+		\cf6 <!-- 
+\f0 \'ca\'fd\'be\'dd\'d4\'b4
+\f1  -->\cf0 \
+		\cf2 <\cf3 property\cf0  \cf4 name\cf0 =
+\f2\i \cf5 "dataSource"
+\f1\i0 \cf0  \cf4 ref\cf0 =
+\f2\i \cf5 "dataSource"
+\f1\i0 \cf2 ></\cf3 property\cf2 >\cf0 \
+		\
+	\cf2 </\cf3 bean\cf2 >\cf0 	\
+\
+\
+\
+\
+\
+\
+\
+}

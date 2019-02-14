@@ -1,0 +1,73 @@
+{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 Menlo-Italic;\f4\fnil\fcharset134 STSongti-SC-Regular;\f5\froman\fcharset0 Times-Roman;
+}
+{\colortbl;\red255\green255\blue255;\red63\green95\blue191;\red0\green128\blue128;\red63\green127\blue127;
+\red127\green0\blue127;\red42\green0\blue255;\red0\green0\blue0;\red251\green2\blue7;\red114\green44\blue253;
+}
+{\*\expandedcolortbl;;\csgenericrgb\c24706\c37255\c74902;\csgenericrgb\c0\c50196\c50196;\csgenericrgb\c24706\c49804\c49804;
+\csgenericrgb\c49804\c0\c49804;\csgenericrgb\c16471\c0\c100000;\cssrgb\c0\c0\c0;\cssrgb\c100000\c14913\c0;\cssrgb\c52799\c30710\c99498;
+}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0  1.\'ca\'e4\'b3\'f6pojo\'c0\'e0\
+
+\fs32 \'ca\'b9\'d3\'c3resultType\'bd\'f8\'d0\'d0\'ca\'e4\'b3\'f6\'d3\'b3\'c9\'e4\'a3\'ac\'d6\'bb\'d3\'d0\'b2\'e9\'d1\'af\'b3\'f6\'c0\'b4\'b5\'c4\'c1\'d0\'c3\'fb\'d3\'ebpojo\'b5\'c4\'ca\'f4\'d0\'d4\'c3\'fb\'d2\'bb\'d6\'c2\'a3\'ac\'b8\'c3\'c1\'d0\'b2\'c5\'c4\'dc\'d3\'b3\'c9\'e4\'b3\'c9\'b9\'a6\'a3\'ac\'c8\'e7\'b9\'fb\'b3\'f6\'cf\'d6\'cf\'c2\'ca\'f6\'d6\'bb\'b2\'e9\'d1\'af\'b2\'bf\'b7\'d6\'d7\'d6\'b6\'ce\'b5\'c4\'c7\'e9\'bf\'f6\'a3\'ba\
+
+\f1\fs24 {{\NeXTGraphic Pasted Graphic 2.tiff \width20380 \height1680 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs32 \cf0 \'d4\'f2\'d3\'b3\'c9\'e4\'b3\'f6\'c0\'b4\'b5\'c4pojo\'c0\'e0\'b6\'d4\'cf\'f3\'b5\'c4\'c6\'e4\'cb\'fb\'d7\'d6\'b6\'ce\'ce\'aa\'bf\'d5\
+2.\'d0\'e8\'c7\'f3\'a3\'ba\'ca\'b5\'cf\'d6\'b7\'d6\'d2\'b3\'b2\'e9\'d1\'af\
+\'d0\'e8\'d2\'aa\'b2\'e9\'d1\'af\'d7\'dc\'ca\'fd\'ba\'cd	\'d3\'c3\'bb\'a7\'d7\'db\'ba\'cf\'b2\'e9\'d1\'af\'b2\'c5\'c4\'dc\'b9\'bb\'ca\'b5\'cf\'d6\'b7\'d6\'d2\'b3\'a3\'ac\'be\'cd\'ca\'c7\'cb\'b5\'d2\'aa\'b2\'e9\'d1\'af\'d7\'dc\'ca\'fdint\'a3\'ac\'ba\'cduser\'b5\'c4List\'a1\'a3\
+Mapper.xml:\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf2 <!-- 
+\f0 \'d3\'c3\'bb\'a7\'d0\'c5\'cf\'a2\'b5\'c4\'d7\'db\'ba\'cf\'b2\'e9\'d1\'af\'b5\'c4\'d7\'dc\'ca\'fd
+\f2  -->\cf0 \
+	  \cf3 <\cf4 select\cf0  \cf5 id\cf0 =
+\f3\i \cf6 "findUserCount"
+\f2\i0 \cf0  \cf5 parameterType\cf0 =
+\f3\i \cf6 "mybatis.pojo.UserQueryVo"
+\f2\i0 \cf0  \cf5 resultType\cf0 =
+\f3\i \cf6 "int"
+\f2\i0 \cf3 >\cf0 \
+	  	select count(*) from user where user.sex = #\{userCustom.sex\} and user.username like '%$\{userCustom.username\}%'\
+	  \cf3 </\cf4 select\cf3 >\
+
+\f0 \'c6\'e4\'cb\'fb\'cf\'e0\'cb\'c6\'a3\'ac\'b1\'c8\'bd\'cf\'bc\'f2\'b5\'a5\
+\
+\cf7 3.
+\f4\b\fs36\fsmilli18333 \cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 \'ca\'e4\'b3\'f6hashmap
+\f5\fs42\fsmilli21333 \
+\pard\pardeftab720\sl400\sa0\qj\partightenfactor0
+
+\f4\b0\fs28 \cf7 \'ca\'e4\'b3\'f6pojo\'b6\'d4\'cf\'f3\'bf\'c9\'d2\'d4\'b8\'c4\'d3\'c3
+\f5 hashmap
+\f4 \'ca\'e4\'b3\'f6\'c0\'e0\'d0\'cd\'a3\'ac\'bd\'ab\'ca\'e4\'b3\'f6\'b5\'c4\'d7\'d6\'b6\'ce\'c3\'fb\'b3\'c6(
+\f0\fs32 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \'b1\'ed
+\f4\fs28 \cf7 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 \'b5\'c4\'c1\'d0\'c3\'fb)\'d7\'f7\'ce\'aa
+\f5 map
+\f4 \'b5\'c4
+\f5 key
+\f4 \'a3\'ac
+\f5 value
+\f4 \'ce\'aa\'d7\'d6\'b6\'ce\'d6\'b5\'a1\'a3
+\f5 \
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs32 \cf3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\cf8 \'d7\'dc\'bd\'e1\'a3\'ba\
+1.\'b2\'e9\'d1\'af\'b3\'f6\'c0\'b4\'b5\'c4\'bd\'e1\'b9\'fb\'bc\'af\'d6\'bb\'d3\'d0\'d2\'bb\'d0\'d0\'d2\'bb\'c1\'d0\'a3\'ac\'ca\'e4\'b3\'f6\'c0\'e0\'d0\'cd\'b2\'c5\'c4\'dc\'d3\'c3\'bc\'f2\'b5\'a5\'c0\'e0\'d0\'cd\
+2.\'ca\'e4\'b3\'f6pojo\'b6\'d4\'cf\'f3\'ba\'cdpojo\'c1\'d0\'b1\'ed\'a3\'ac\'d4\'f2\'d4\'damapper.xml\'d6\'d0resultType\'d6\'b8\'b6\'a8\'b5\'c4\'c0\'e0\'d0\'cd\'ca\'c7\'d2\'bb\'d1\'f9\'b5\'c4\'a3\'ac\'b6\'bc\'ca\'c7pojo\'c0\'e0\'b5\'c4\'c8\'ab\'cf\'de\'b6\'a8\'c0\'e0\'c3\'fb\'a3\'ac\'b5\'ab\'ca\'c7\'d4\'damapper.java\'bd\'d3\'bf\'da\'d6\'d0\'b2\'bb\'d2\'bb\'d1\'f9\'a3\'ac\'d2\'bb\'b8\'f6\'ca\'c7pojo\'b6\'d4\'cf\'f3\'a3\'ac\'d2\'bb\'b8\'f6\'ca\'c7List<pojo>\'c1\'d0\'b1\'ed\
+\
+\cf9 \'ca\'b5\'bc\'ca\'c9\'cf\'a3\'ac\'c9\'fa\'b3\'c9\'b5\'c4\'b6\'af\'cc\'ac\'b4\'fa\'c0\'ed\'b5\'c4mapper\'b6\'d4\'cf\'f3\'ca\'c7\'b8\'f9\'be\'ddmapper\'b7\'bd\'b7\'a8\'a3\'a8\'bc\'b4\'b5\'f7\'d3\'c3\'b5\'c4\'b7\'bd\'b7\'a8\'a3\'a9\'b5\'c4\'b7\'b5\'bb\'d8\'d6\'b5\'c0\'e0\'d0\'cd\'c0\'b4\'c8\'b7\'b6\'a8\'ca\'c7\'b5\'f7\'d3\'c3selectOne\'bb\'b9\'ca\'c7selectList
+\f2 \cf3 \
+
+\f0 \cf0 \
+}

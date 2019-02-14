@@ -1,0 +1,254 @@
+{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset0 AppleColorEmoji;\f1\fnil\fcharset134 PingFangSC-Regular;\f2\fswiss\fcharset0 Helvetica;
+\f3\fnil\fcharset0 Menlo-Regular;\f4\fnil\fcharset0 Menlo-Italic;\f5\fnil\fcharset0 Menlo-Bold;
+}
+{\colortbl;\red255\green255\blue255;\red63\green95\blue191;\red0\green128\blue128;\red63\green127\blue127;
+\red127\green0\blue127;\red42\green0\blue255;\red0\green0\blue0;\red63\green127\blue95;\red127\green0\blue85;
+\red63\green95\blue191;\red127\green159\blue191;\red100\green100\blue100;\red0\green0\blue192;\red42\green0\blue255;
+\red106\green62\blue62;\red63\green127\blue95;}
+{\*\expandedcolortbl;;\csgenericrgb\c24706\c37255\c74902;\csgenericrgb\c0\c50196\c50196;\csgenericrgb\c24706\c49804\c49804;
+\csgenericrgb\c49804\c0\c49804;\csgenericrgb\c16471\c0\c100000;\cssrgb\c0\c0\c0;\csgenericrgb\c24706\c49804\c37255;\csgenericrgb\c49804\c0\c33333;
+\csgenericrgb\c24706\c37255\c74902;\csgenericrgb\c49804\c62353\c74902;\csgenericrgb\c39216\c39216\c39216;\csgenericrgb\c0\c0\c75294;\csgenericrgb\c16471\c0\c100000;
+\csgenericrgb\c41569\c24314\c24314;\csgenericrgb\c24706\c49804\c37255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs36 \cf0 \uc0\u10060 
+\f1 \'c5\'e4\'d6\'c3\'ce\'c4\'bc\'fe\'d6\'d0
+\f2 $\{\}
+\f1 \'b6\'c1\'b2\'bb\'b5\'bd
+\f2 properties
+\f1 \'d6\'d0\'b5\'c4\'d6\'b5\
+	
+\f0 \uc0\u9989 
+\f1 \'d2\'d1\'bd\'e2\'be\'f6\'a3\'ba\'cb\'f9\'d3\'d0\'d0\'e8\'d2\'aa\'b6\'c1\'c8\'a1\'b5\'c4\'c5\'e4\'d6\'c3\'b6\'bc\'b7\'c5\'d4\'da\'cd\'ac\'d2\'bb\'b8\'f6xml\'d6\'d0\'a3\'ac\'b2\'bb\'d2\'aa\'b7\'d6\'c4\'a3\'bf\'e9\
+	spring-dao.xml\'d6\'d0\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f3 \cf2 	<!-- mail
+\f1 \'c5\'e4\'d6\'c3
+\f3  -->\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 	\cf3 <\cf4 context:property-placeholder\cf0  \cf5 location\cf0 =
+\f4\i \cf6 "classpath:mail.properties"
+\f3\i0 \cf0  \cf3 />\
+
+\f2 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 	
+\f3 \cf2 <!-- 
+\f1 \'d3\'ca\'bc\'fe\'c5\'e4\'d6\'c3
+\f3  -->\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 	\cf3 <\cf4 bean\cf0  \cf5 id\cf0 =
+\f4\i \cf6 "javaMailSender"
+\f3\i0 \cf0 \
+		\cf5 class\cf0 =
+\f4\i \cf6 "org.springframework.mail.javamail.JavaMailSenderImpl"
+\f3\i0 \cf3 >\cf0 \
+		\cf3 <\cf4 property\cf0  \cf5 name\cf0 =
+\f4\i \cf6 "host"
+\f3\i0 \cf0  \cf5 value\cf0 =
+\f4\i \cf6 "$\{mail.smtp.host\}"
+\f3\i0 \cf0  \cf3 />\cf0 \
+		\cf3 <\cf4 property\cf0  \cf5 name\cf0 =
+\f4\i \cf6 "username"
+\f3\i0 \cf0  \cf5 value\cf0 =
+\f4\i \cf6 "$\{mail.smtp.username\}"
+\f3\i0 \cf0  \cf3 />\cf0 \
+		\cf3 <\cf4 property\cf0  \cf5 name\cf0 =
+\f4\i \cf6 "password"
+\f3\i0 \cf0  \cf5 value\cf0 =
+\f4\i \cf6 "$\{mail.smtp.password\}"
+\f3\i0 \cf0  \cf3 />\cf0 \
+		\cf3 <\cf4 property\cf0  \cf5 name\cf0 =
+\f4\i \cf6 "defaultEncoding"
+\f3\i0 \cf0 \
+			\cf5 value\cf0 =
+\f4\i \cf6 "utf-8"
+\f3\i0 \cf0  \cf3 />\cf0 \
+		\cf3 <\cf4 property\cf0  \cf5 name\cf0 =
+\f4\i \cf6 "javaMailProperties"
+\f3\i0 \cf3 >\cf0 \
+			\cf3 <\cf4 props\cf3 >\cf0 \
+				\cf3 <\cf4 prop\cf0  \cf5 key\cf0 =
+\f4\i \cf6 "mail.smtp.auth"
+\f3\i0 \cf3 >\cf0 $\{mail.smtp.auth\}\cf3 </\cf4 prop\cf3 >\cf0 \
+				\cf3 <\cf4 prop\cf0  \cf5 key\cf0 =
+\f4\i \cf6 "mail.smtp.timeout"
+\f3\i0 \cf3 >\cf0 $\{mail.smtp.timeout\}\cf3 </\cf4 prop\cf3 >\cf0 \
+			\cf3 </\cf4 props\cf3 >\cf0 \
+		\cf3 </\cf4 property\cf3 >\cf0 \
+	\cf3 </\cf4 bean\cf3 >\
+	\
+\pard\pardeftab720\partightenfactor0
+\cf7 	mail
+\f1 .properties
+\f2 \cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 	
+\f3 \cf8 #
+\f1 \'d3\'ca\'bc\'fe\'b7\'fe\'ce\'f1\'c6\'f7
+\f3 \cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 	mail.smtp.host=\cf6 \ul \ulc6 smtp\ulnone .163.\ul com\cf0 \ulnone \
+\pard\pardeftab720\partightenfactor0
+\cf8 	#
+\f1 \'d3\'c3\'bb\'a7\'c3\'fb
+\f3 \cf0 \
+	mail.smtp.username=\cf6 13794479683@163.\ul com\cf0 \ulnone \
+\cf8 	#
+\f1 \'c3\'dc\'c2\'eb
+\f3 /
+\f1 \'bf\'cd\'bb\'a7\'b6\'cb\'ca\'da\'c8\'a8\'c2\'eb
+\f3 \cf0 \
+	mail.smtp.password=\cf6 hjp44030\cf0 \
+\cf8 	#
+\f1 \'b1\'e0\'c2\'eb\'d7\'d6\'b7\'fb
+\f3 \cf0 \
+	mail.smtp.defaultEncoding=\cf6 \ul utf\ulnone -8\cf0 \
+\cf8 	#
+\f1 \'ca\'c7\'b7\'f1\'bd\'f8\'d0\'d0\'d3\'c3\'bb\'a7\'c3\'fb\'c3\'dc\'c2\'eb\'d0\'a3\'d1\'e9
+\f3 \cf0 \
+	mail.smtp.auth=\cf6 true\cf0 \
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf8 	#
+\f1 \'c9\'e8\'d6\'c3\'b3\'ac\'ca\'b1\'ca\'b1\'bc\'e4
+\f3 \cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf0 	mail.smtp.timeout=\cf6 10000\
+\
+\
+\
+controller
+\f1 \'a3\'ba
+\f3 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f5\b \cf9 package
+\f3\b0 \cf0  cn.geepy.blog.controller;\
+\
+
+\f5\b \cf9 import
+\f3\b0 \cf0  java.util.HashMap;\
+
+\f5\b \cf9 import
+\f3\b0 \cf0  java.util.Map;\
+
+\f5\b \cf9 import
+\f3\b0 \cf0  java.util.Properties;\
+\
+
+\f5\b \cf9 import
+\f3\b0 \cf0  javax.mail.internet.MimeMessage;\
+\
+
+\f5\b \cf9 import
+\f3\b0 \cf0  org.springframework.beans.factory.annotation.Autowired;\
+
+\f5\b \cf9 import
+\f3\b0 \cf0  org.springframework.mail.javamail.JavaMailSender;\
+
+\f5\b \cf9 import
+\f3\b0 \cf0  org.springframework.mail.javamail.MimeMessageHelper;\
+
+\f5\b \cf9 import
+\f3\b0 \cf0  org.springframework.stereotype.Controller;\
+
+\f5\b \cf9 import
+\f3\b0 \cf0  org.springframework.web.bind.annotation.RequestMapping;\
+
+\f5\b \cf9 import
+\f3\b0 \cf0  org.springframework.web.bind.annotation.ResponseBody;\
+\
+\pard\pardeftab720\partightenfactor0
+\cf10 /**\cf0 \
+\cf10  * 
+\f1 \'b7\'a2\'cb\'cd\'d3\'ca\'bc\'fe
+\f3 \cf0 \
+\cf10  * 
+\f5\b \cf11 @author
+\f3\b0 \cf10  \ul mac\cf0 \ulnone \
+\cf10  *\cf0 \
+\cf10  */\cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf12 @Controller\cf0 \
+\pard\pardeftab720\partightenfactor0
+
+\f5\b \cf9 public
+\f3\b0 \cf0  
+\f5\b \cf9 class
+\f3\b0 \cf0  MailController \{\
+\
+	\cf12 @Autowired\cf0 \
+	
+\f5\b \cf9 private
+\f3\b0 \cf0  JavaMailSender \cf13 javaMailSender\cf0  ;\
+	\
+	\cf12 @RequestMapping\cf0 (\cf14 "sendMail"\cf0 )\
+	\cf12 @ResponseBody\cf0 \
+	
+\f5\b \cf9 public
+\f3\b0 \cf0  Map<String, String> sendMail(String \cf15 advise\cf0 ) 
+\f5\b \cf9 throws
+\f3\b0 \cf0  Exception\{\
+		Map<String, String> \cf15 map\cf0  = 
+\f5\b \cf9 new
+\f3\b0 \cf0  HashMap<>() ;\
+		\
+		\cf16 //
+\f1 \'b4\'b4\'bd\'a8\'d3\'ca\'bc\'fe\'b6\'d4\'cf\'f3
+\f3 \cf0 \
+		MimeMessage \cf15 mMessage\cf0  = \cf13 javaMailSender\cf0 .createMimeMessage() ;\
+		MimeMessageHelper \cf15 messageHelper\cf0  ;\
+		Properties \cf15 properties\cf0  =
+\f5\b \cf9 new
+\f3\b0 \cf0  Properties() ;\
+		String \cf15 from\cf0  ;\
+		
+\f5\b \cf9 try
+\f3\b0 \cf0  \{\
+			\cf15 properties\cf0 .load(
+\f5\b \cf9 this
+\f3\b0 \cf0 .getClass().getResourceAsStream(\cf14 "/mail.properties"\cf0 ));\
+			\cf15 from\cf0  = \cf15 properties\cf0 .get(\cf14 "mail.smtp.username"\cf0 )+\cf14 ""\cf0  ;\
+			\cf15 messageHelper\cf0  = 
+\f5\b \cf9 new
+\f3\b0 \cf0  MimeMessageHelper(\cf15 mMessage\cf0 ,
+\f5\b \cf9 true
+\f3\b0 \cf0 ) ;\
+			\cf15 messageHelper\cf0 .setFrom(\cf15 from\cf0 );\cf16 //
+\f1 \'b7\'a2\'bc\'fe\'c8\'cb\'d3\'ca\'cf\'e4
+\f3 \cf0 \
+			\cf15 messageHelper\cf0 .setTo(\cf15 from\cf0 );\
+			\cf15 messageHelper\cf0 .setSubject(\cf14 "blog
+\f1 \'d2\'e2\'bc\'fb\'b7\'b4\'c0\'a1
+\f3 "\cf0 );\
+			\cf15 messageHelper\cf0 .setText(\cf15 advise\cf0 );\
+			\cf13 javaMailSender\cf0 .send(\cf15 mMessage\cf0 );\
+		\}
+\f5\b \cf9 catch
+\f3\b0 \cf0  (Exception \cf15 e\cf0 ) \{\
+			\cf15 e\cf0 .printStackTrace();\
+			\cf15 map\cf0 .put(\cf14 "error"\cf0 , \cf14 "
+\f1 \'b7\'a2\'cb\'cd\'ca\'a7\'b0\'dc
+\f3 "\cf0 ) ;\
+			
+\f5\b \cf9 return
+\f3\b0 \cf0  \cf15 map\cf0  ;\
+		\}\
+		\
+		\cf15 map\cf0 .put(\cf14 "success"\cf0 , \cf14 "
+\f1 \'b7\'a2\'cb\'cd\'b3\'c9\'b9\'a6\'a3\'ac\'b8\'d0\'d0\'bb\'c4\'fa\'b1\'a6\'b9\'f3\'b5\'c4\'d2\'e2\'bc\'fb\'a3\'a1
+\f3 "\cf0 ) ;\
+		\
+		
+\f5\b \cf9 return
+\f3\b0 \cf0  \cf15 map\cf0  ;\
+	\}\
+	\
+	\
+	\
+\}\
+}

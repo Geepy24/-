@@ -1,0 +1,226 @@
+{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fswiss\fcharset0 Helvetica;\f2\fnil\fcharset0 Menlo-Regular;
+\f3\fnil\fcharset0 Menlo-Italic;}
+{\colortbl;\red255\green255\blue255;\red63\green95\blue191;\red0\green128\blue128;\red63\green127\blue127;
+\red127\green0\blue127;\red42\green0\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\csgenericrgb\c24706\c37255\c74902;\csgenericrgb\c0\c50196\c50196;\csgenericrgb\c24706\c49804\c49804;
+\csgenericrgb\c49804\c0\c49804;\csgenericrgb\c16471\c0\c100000;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww9940\viewh15520\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs32 \cf0 \'b6\'e0\'b6\'d4\'b6\'e0\'b2\'e9\'d1\'af
+\f1 \
+
+\f0 \'d0\'e8\'c7\'f3\'a3\'ba\'b2\'e9\'d1\'af\'d3\'c3\'bb\'a7\'bc\'b0\'d3\'c3\'bb\'a7\'b9\'ba\'c2\'f2\'c9\'cc\'c6\'b7\'b5\'c4\'d0\'c5\'cf\'a2user->items\
+\'d0\'e8\'d2\'aa\'b2\'e9\'d1\'af\'b5\'c4\'d6\'f7\'b1\'ed\'a3\'ba\'d3\'c3\'bb\'a7\'b1\'ed\
+\'b9\'d8\'c1\'aa\'b1\'ed\'a3\'ba\'d3\'c9\'d3\'da\'d3\'c3\'bb\'a7\'ba\'cd\'c9\'cc\'c6\'b7\'c3\'bb\'d3\'d0\'d6\'b1\'bd\'d3\'b9\'d8\'c1\'aa\'a3\'ac\'cd\'a8\'b9\'fd\'b6\'a9\'b5\'a5\'ba\'cd\'b6\'a9\'b5\'a5\'c3\'f7\'cf\'b8\'bd\'f8\'d0\'d0\'b9\'d8\'c1\'aa\'a3\'ac\'cb\'f9\'d2\'d4\'b9\'d8\'c1\'aa\'b1\'ed\'ca\'c7\'a3\'baorders,orderdetail,items\
+Sql\'d3\'ef\'be\'e4\'a3\'ba\
+select \
+		orders.*,\
+		user.username,\
+		user.sex,\
+		user.address,\
+		orderdetail.id orderdetail_id,\
+		orderdetail.items_id,\
+		orderdetail.items_num,\
+		orderdetail.orders_id,\
+		items.`name` items_name,\
+		items.detail,\
+		items.price\
+ from orders ,user , orderdetail,items \
+ where orders.user_id=user.id and orderdetail.orders_id=orders.id and orderdetail.items_id = items.id; \
+\'cf\'c5skr\'c8\'cb\
+\
+\'bd\'e1\'b9\'fb\'d3\'b3\'c9\'e4\'b5\'c4\'cb\'bc\'c2\'b7\'a3\'ba\
+\'d6\'f7\'b2\'e9\'d1\'af\'b1\'e4\'b3\'c9\'c1\'cb\'d3\'c3\'bb\'a7\'a3\'ac\'bd\'ab\'d3\'c3\'bb\'a7\'d0\'c5\'cf\'a2\'d3\'b3\'c9\'e4\'b5\'bduser\'d6\'d0\
+\'d4\'dauser\'c0\'e0\'d6\'d0\'cc\'ed\'bc\'d3\'b6\'a9\'b5\'a5\'c1\'d0\'b1\'ed\'b5\'c4\'ca\'f4\'d0\'d4List<Orders> orderslist\'a3\'ac\'bd\'ab\'d3\'c3\'bb\'a7\'b5\'c4\'b6\'a9\'b5\'a5\'d3\'b3\'c9\'e4\'b5\'bdorderlist\
+\'d4\'daOrders\'d6\'d0\'cc\'ed\'bc\'d3\'b6\'a9\'b5\'a5\'c3\'f7\'cf\'b8\'c1\'d0\'b1\'ed\'ca\'f4\'d0\'d4List<OrderDetail> orderDetails\'a3\'ac\'bd\'ab\'b6\'a9\'b5\'a5\'d6\'d0\'b5\'c4\'c3\'f7\'cf\'b8\'cc\'ed\'bc\'d3\'b5\'bd\'c1\'d0\'b1\'ed\'ca\'f4\'d0\'d4orderDetails\
+\'d4\'daOrderDetail\'d6\'d0\'cc\'ed\'bc\'d3Items\'ca\'f4\'d0\'d4\'a3\'ac\'bd\'ab\'b6\'a9\'b5\'a5\'c3\'f7\'cf\'b8\'b6\'d4\'d3\'a6\'b5\'c4\'c9\'cc\'c6\'b7\'d3\'b3\'c9\'e4\'b5\'bditems\
+\
+\
+\
+Mapper.xml\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf0 	\cf2 <!-- 
+\f0 \'b2\'e9\'d1\'af\'d3\'c3\'bb\'a7\'bc\'b0\'b9\'ba\'c2\'f2\'b5\'c4\'c9\'cc\'c6\'b7\'d0\'c5\'cf\'a2
+\f2  
+\f0 \'a3\'ac\'ca\'b9\'d3\'c3
+\f2 resultMap-->\cf0 \
+	\cf3 <\cf4 select\cf0  \cf5 id\cf0 =
+\f3\i \cf6 "findUserAndItemsResultMap"
+\f2\i0 \cf0  \cf5 resultMap\cf0 =
+\f3\i \cf6 "UserAndItemsResultMap"
+\f2\i0 \cf3 >\cf0 \
+		select \
+		orders.*,\
+		user.username,\
+		user.sex,\
+		user.address,\
+		orderdetail.id orderdetail_id,\
+		orderdetail.items_id,\
+		orderdetail.items_num,\
+		orderdetail.orders_id,\
+		items.`name` items_name,\
+		items.detail,\
+		items.price\
+ 		from orders ,user , \ul orderdetail\ulnone ,items \
+ 		where orders.user_id=user.id and orderdetail.orders_id=orders.id and orderdetail.items_id = items.id; \
+\
+	\cf3 </\cf4 select\cf3 >\
+\pard\pardeftab720\partightenfactor0
+\cf7 \
+resultMap
+\f0 \'b6\'a8\'d2\'e5\'a3\'ba\'a3\'a8\'b9\'d8\'bc\'fc\'a3\'a9\'d7\'a2\'d2\'e2\'b8\'f7\'d7\'d4\'b5\'c4\'b0\'fc\'ba\'ac\'b9\'d8\'cf\'b5\
+\pard\pardeftab720\partightenfactor0
+
+\f2 \cf0 	\cf2 <!-- 
+\f0 \'b2\'e9\'d1\'af\'d3\'c3\'bb\'a7\'bc\'b0\'b9\'ba\'c2\'f2\'b5\'c4\'c9\'cc\'c6\'b7
+\f2  -->\cf0 \
+	\cf3 <\cf4 resultMap\cf0  \cf5 type\cf0 =
+\f3\i \cf6 "mybatis.pojo.User"
+\f2\i0 \cf0  \cf5 id\cf0 =
+\f3\i \cf6 "UserAndItemsResultMap"
+\f2\i0 \cf3 >\cf0 \
+		\cf2 <!--
+\f0 \'d3\'c3\'bb\'a7\'d0\'c5\'cf\'a2
+\f2   -->\cf0 \
+	\cf3 <\cf4 id\cf0  \cf5 column\cf0 =
+\f3\i \cf6 "user_id"
+\f2\i0 \cf0  \cf5 property\cf0 =
+\f3\i \cf6 "id"
+\f2\i0 \cf3 />\cf0 \
+	\cf3 <\cf4 result\cf0  \cf5 column\cf0 =
+\f3\i \cf6 "username"
+\f2\i0 \cf0  \cf5 property\cf0 =
+\f3\i \cf6 "username"
+\f2\i0 \cf0  \cf3 />\cf0 \
+	\cf3 <\cf4 result\cf0  \cf5 column\cf0 =
+\f3\i \cf6 "sex"
+\f2\i0 \cf0  \cf5 property\cf0 =
+\f3\i \cf6 "sex"
+\f2\i0 \cf0  \cf3 />\cf0 \
+	\cf3 <\cf4 result\cf0  \cf5 column\cf0 =
+\f3\i \cf6 "address"
+\f2\i0 \cf0  \cf5 property\cf0 =
+\f3\i \cf6 "address"
+\f2\i0 \cf0  \cf3 />\cf0 \
+		\cf2 <!-- 
+\f0 \'b6\'a9\'b5\'a5\'d0\'c5\'cf\'a2
+\f2  \cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf2 		
+\f0 \'d2\'bb\'b8\'f6\'d3\'c3\'bb\'a7\'b6\'d4\'d3\'a6\'b6\'e0\'b8\'f6\'b6\'a9\'b5\'a5\'a3\'ac\'ca\'b9\'d3\'c3
+\f2 collection
+\f0 \'d3\'b3\'c9\'e4
+\f2 \cf0 \
+\cf2 		-->\cf0 \
+		\cf3 <\cf4 collection\cf0  \cf5 property\cf0 =
+\f3\i \cf6 "ordersList"
+\f2\i0 \cf0  \cf5 ofType\cf0 =
+\f3\i \cf6 "mybatis.pojo.Orders"
+\f2\i0 \cf3 >\cf0 \
+			\cf3 <\cf4 id\cf0  \cf5 column\cf0 =
+\f3\i \cf6 "id"
+\f2\i0 \cf0  \cf5 property\cf0 =
+\f3\i \cf6 "id"
+\f2\i0 \cf3 />\cf0 \
+			\cf3 <\cf4 result\cf0  \cf5 column\cf0 =
+\f3\i \cf6 "user_id"
+\f2\i0 \cf0  \cf5 property\cf0 =
+\f3\i \cf6 "userId"
+\f2\i0 \cf3 />\cf0 \
+			\cf3 <\cf4 result\cf0  \cf5 column\cf0 =
+\f3\i \cf6 "number"
+\f2\i0 \cf0  \cf5 property\cf0 =
+\f3\i \cf6 "number"
+\f2\i0 \cf3 />\cf0 \
+			\cf3 <\cf4 result\cf0  \cf5 column\cf0 =
+\f3\i \cf6 "createtime"
+\f2\i0 \cf0  \cf5 property\cf0 =
+\f3\i \cf6 "createtime"
+\f2\i0 \cf3 />\cf0 \
+			\cf3 <\cf4 result\cf0  \cf5 column\cf0 =
+\f3\i \cf6 "note"
+\f2\i0 \cf0  \cf5 property\cf0 =
+\f3\i \cf6 "note"
+\f2\i0 \cf3 />\cf0 \
+			\
+			\cf2 <!-- 
+\f0 \'b6\'a9\'b5\'a5\'c3\'f7\'cf\'b8\'a3\'ac\'d2\'bb\'b8\'f6\'b6\'a9\'b5\'a5\'a3\'ac\'b6\'e0\'b8\'f6\'c3\'f7\'cf\'b8\'a3\'ac\'d2\'aa\'d0\'b4\'b5\'bd
+\f2 collection
+\f0 \'b1\'ea\'c7\'a9\'d6\'d0\'a3\'ac\'bb\'b9\'ca\'c7\'ca\'b9\'d3\'c3
+\f2 collection
+\f0 \'b1\'ea\'c7\'a9
+\f2  -->\cf0 \
+			\cf3 <\cf4 collection\cf0  \cf5 property\cf0 =
+\f3\i \cf6 "orderdetails"
+\f2\i0 \cf0  \cf5 ofType\cf0 =
+\f3\i \cf6 "Orderdetail"
+\f2\i0 \cf3 >\cf0 \
+				\cf3 <\cf4 id\cf0  \cf5 column\cf0 =
+\f3\i \cf6 "orderdetail_id"
+\f2\i0 \cf0  \cf5 property\cf0 =
+\f3\i \cf6 "id"
+\f2\i0 \cf3 />\cf0 \
+				\cf3 <\cf4 result\cf0  \cf5 column\cf0 =
+\f3\i \cf6 "items_id"
+\f2\i0 \cf0  \cf5 property\cf0 =
+\f3\i \cf6 "itemsId"
+\f2\i0 \cf3 />\cf0 \
+				\cf3 <\cf4 result\cf0  \cf5 column\cf0 =
+\f3\i \cf6 "items_num"
+\f2\i0 \cf0  \cf5 property\cf0 =
+\f3\i \cf6 "itemsNum"
+\f2\i0 \cf3 />\cf0 \
+				\cf3 <\cf4 result\cf0  \cf5 column\cf0 =
+\f3\i \cf6 "orders_id"
+\f2\i0 \cf0  \cf5 property\cf0 =
+\f3\i \cf6 "ordersId"
+\f2\i0 \cf3 />\cf0 \
+			\
+			\cf2 <!-- 
+\f0 \'d2\'bb\'b8\'f6\'b6\'a9\'b5\'a5\'c3\'f7\'cf\'b8\'b6\'d4\'d3\'a6\'d2\'bb\'b8\'f6\'c9\'cc\'c6\'b7\'a3\'ac\'cb\'f9\'d2\'d4\'c9\'cc\'c6\'b7\'d2\'aa\'d0\'b4\'d4\'da\'b6\'a9\'b5\'a5\'c3\'f7\'cf\'b8\'d6\'d0
+\f2  -->\cf0 \
+				\cf3 <\cf4 association\cf0  \cf5 property\cf0 =
+\f3\i \cf6 "items"
+\f2\i0 \cf0  \cf5 javaType\cf0 =
+\f3\i \cf6 "mybatis.pojo.Items"
+\f2\i0 \cf3 >\cf0 \
+					\cf3 <\cf4 id\cf0  \cf5 column\cf0 =
+\f3\i \cf6 "items_id"
+\f2\i0 \cf0  \cf5 property\cf0 =
+\f3\i \cf6 "id"
+\f2\i0 \cf3 />\cf0 \
+					\cf3 <\cf4 result\cf0  \cf5 column\cf0 =
+\f3\i \cf6 "items_name"
+\f2\i0 \cf0  \cf5 property\cf0 =
+\f3\i \cf6 "name"
+\f2\i0 \cf3 />\cf0 \
+					\cf3 <\cf4 result\cf0  \cf5 column\cf0 =
+\f3\i \cf6 "items.detail"
+\f2\i0 \cf0  \cf5 property\cf0 =
+\f3\i \cf6 "detail"
+\f2\i0 \cf3 />\cf0 \
+					\cf3 <\cf4 result\cf0  \cf5 column\cf0 =
+\f3\i \cf6 "items.price"
+\f2\i0 \cf0  \cf5 property\cf0 =
+\f3\i \cf6 "price"
+\f2\i0 \cf3 />\cf0 \
+				\cf3 </\cf4 association\cf3 >\cf0 \
+			\
+			\cf3 </\cf4 collection\cf3 >\cf0 \
+		\
+		\cf3 </\cf4 collection\cf3 >\cf0 \
+		\
+	\cf3 </\cf4 resultMap\cf3 >\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf0 \'bd\'d3\'bf\'da\'d3\'eb\'b2\'e2\'ca\'d4\'b4\'fa\'c2\'eb\'be\'cd\'b2\'bb\'cc\'e1\'c1\'cb\
+\
+\'d7\'dc\'bd\'e1\'a3\'ba\
+\'bd\'ab\'b2\'e9\'d1\'af\'d3\'c3\'bb\'a7\'b9\'ba\'c2\'f2\'b5\'c4\'c9\'cc\'c6\'b7\'d0\'c5\'cf\'a2\'c3\'f7\'cf\'b8\'c7\'e5\'b5\'a5\'a3\'a8\'d3\'c3\'bb\'a7\'c3\'fb\'a3\'ac\'b5\'d8\'d6\'b7\'a3\'ac\'b9\'ba\'c2\'f2\'c9\'cc\'c6\'b7\'c3\'fb\'b3\'c6\'a3\'ac\'ca\'b1\'bc\'e4\'a3\'ac\'ca\'fd\'c1\'bf\'a3\'a9\
+\'d5\'eb\'b6\'d4\'c9\'cf\'c3\'e6\'d0\'e8\'c7\'f3\'a3\'ac\'be\'cd\'ca\'b9\'d3\'c3resultType\'bd\'ab\'b2\'e9\'d1\'af\'b5\'bd\'b5\'c4\'bc\'c7\'c2\'bc\'d3\'b3\'c9\'e4\'b5\'bd\'d2\'bb\'b8\'f6\'c0\'a9\'d5\'b9\'b5\'c4pojo\'d6\'d0\'a3\'ac\'be\'cd\'bf\'c9\'d2\'d4\'bc\'f2\'b5\'a5\'b5\'c4\'ca\'b5\'cf\'d6\'c3\'f7\'cf\'b8\'c7\'e5\'b5\'a5\'b5\'c4\'b9\'a6\'c4\'dc\'a1\'a3\'d3\'b3\'c9\'e4\'b3\'f6\'b5\'c4\'be\'cd\'ca\'c7\'d2\'bb\'b8\'f6list\'bc\'af\'ba\'cf\'a3\'ac\'c3\'bf\'cc\'f5\'b6\'bc\'d3\'d0\'d6\'d8\'b8\'b4\'b5\'c4userId\'ba\'cd\'b5\'d8\'d6\'b7\'a1\'a3\
+\'c9\'cf\'c3\'e6\'b5\'c4resultMap\'ca\'c7\'bd\'cf\'ce\'aa\'cf\'ea\'cf\'b8\'b5\'c4\'c3\'f7\'cf\'b8\'c7\'e5\'b5\'a5\'a3\'ac\'be\'df\'cc\'e5\'ca\'b9\'d3\'c3resultMap\'bb\'b9\'ca\'c7resultType\'d2\'aa\'bf\'b4\'ca\'b5\'bc\'ca\'d0\'e8\'c7\'f3\'a1\'a3\'d6\'f7\'d2\'aa\'bf\'b4\'b6\'d4\'b2\'e9\'d1\'af\'b5\'c4\'bd\'e1\'b9\'fb\'d3\'d0\'c3\'bb\'d3\'d0\'cc\'d8\'ca\'e2\'b5\'c4\'d0\'e8\'c7\'f3\'a3\'ac\'d3\'d0\'be\'cd\'d3\'c3resultMap\'a3\'ac\'d3\'b3\'c9\'e4\'b3\'f6\'b5\'c4\'be\'cd\'ca\'c7\'d2\'bb\'cc\'f5\'bc\'c7\'c2\'bc\'a3\'ac\'b0\'fc\'ba\'ac\'cb\'f9\'d3\'d0\'d0\'c5\'cf\'a2\'a3\'ac\'c3\'bb\'d3\'d0\'d6\'d8\'b8\'b4\'a1\'a3\
+\'c0\'e0\'d7\'d6\'b6\'ce\'b0\'fc\'ba\'aclist\'a3\'ac\'be\'cd\'d3\'c3resultMap}

@@ -1,0 +1,109 @@
+{\rtf1\ansi\ansicpg936\cocoartf1561\cocoasubrtf600
+{\fonttbl\f0\fnil\fcharset134 PingFangSC-Regular;\f1\fnil\fcharset0 Menlo-Regular;\f2\fnil\fcharset0 Menlo-Bold;
+\f3\fnil\fcharset0 Menlo-Italic;}
+{\colortbl;\red255\green255\blue255;\red63\green127\blue95;\red127\green0\blue85;\red0\green0\blue192;
+\red0\green128\blue128;\red63\green127\blue127;\red127\green0\blue127;\red42\green0\blue255;\red63\green95\blue191;
+\red106\green62\blue62;}
+{\*\expandedcolortbl;;\csgenericrgb\c24706\c49804\c37255;\csgenericrgb\c49804\c0\c33333;\csgenericrgb\c0\c0\c75294;
+\csgenericrgb\c0\c50196\c50196;\csgenericrgb\c24706\c49804\c49804;\csgenericrgb\c49804\c0\c49804;\csgenericrgb\c16471\c0\c100000;\csgenericrgb\c24706\c37255\c74902;
+\csgenericrgb\c41569\c24314\c24314;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs32 \cf0 \'cf\'f2sql\'b4\'ab\'b5\'dd\'ca\'fd\'d7\'e9\'bb\'f2List\'a3\'acmybatis\'ca\'b9\'d3\'c3foreach\'b1\'ea\'c7\'a9\'bd\'e2\'ce\'f6\
+\
+\'d0\'e8\'c7\'f3\'a3\'ba\'d4\'da\'d3\'c3\'bb\'a7\'b2\'e9\'d1\'af\'c1\'d0\'b1\'ed\'ba\'cd\'b2\'e9\'d1\'af\'d7\'dc\'ca\'fd\'b5\'c4statement\'d6\'d0\'a3\'ac\'d4\'f6\'bc\'d3\'b6\'e0\'b8\'f6id\'ca\'e4\'c8\'eb\'b2\'e9\'d1\'af\'a1\'a3\
+sql\'d3\'ef\'be\'e4\'a3\'ba\
+select *from user where (id=1 or id=10 or id=16)\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+\cf0 \'bb\'f2\'d5\'dfselect *from user where id in(1,10,16)\
+\
+1.\'d4\'da\'ca\'e4\'c8\'eb\'b5\'c4\'b2\'ce\'ca\'fd\'c0\'e0\'d0\'cd\'a3\'a8\'b0\'fc\'d7\'b0\'c0\'e0pojo-UserQueryVo\'a3\'a9\'d6\'d0\'a3\'ac\'d2\'aa\'cc\'ed\'bc\'d3List<Integer>\'c0\'b4\'b4\'ab\'c8\'eb\'b6\'e0\'b8\'f6id
+\f1 \
+\pard\pardeftab720\partightenfactor0
+\cf0 	\cf2 //
+\f0 \'b4\'ab\'c8\'eb\'b6\'e0\'b8\'f6
+\f1 id\cf0 \
+	
+\f2\b \cf3 private
+\f1\b0 \cf0  List<Integer> \cf4 ids\cf0  ;\
+	\
+2.
+\f0 \'d0\'de\'b8\'c4
+\f1 sql
+\f0 \'c6\'ac\'b6\'ce\
+\'d4\'f6\'bc\'d3\'d2\'bb\'b8\'f6if\'b1\'ea\'c7\'a9\'cc\'e5\'a3\'ba\
+\pard\pardeftab720\partightenfactor0
+
+\f1 \cf5 <\cf6 if\cf0  \cf7 test\cf0 =
+\f3\i \cf8 "ids!=null"
+\f1\i0 \cf5 >\cf0 \
+			\cf9 <!-- 
+\f0 \'c8\'e7\'b9\'fb
+\f1 \cf9 \ul \ulc9 ids
+\f0 \cf9 \ulnone \'b2\'bb\'b5\'c8\'d3\'da\'bf\'d5\'a3\'ac\'be\'cd\'d2\'aa\'d3\'c3
+\f1 \cf9 \ul \ulc9 foreach
+\f0 \cf9 \ulnone \'b1\'e9\'c0\'fa\'b4\'ab\'c8\'eb\'b5\'c4
+\f1 \cf9 \ul \ulc9 ids\cf9 \ulnone  \cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf9 			collection: 
+\f0 \'d6\'b8\'b6\'a8\'ca\'e4\'c8\'eb\'b6\'d4\'cf\'f3\'d6\'d0\'bc\'af\'ba\'cf\'ca\'f4\'d0\'d4\'c3\'fb\'a3\'ac\'b1\'be\'c0\'fd\'ca\'c7
+\f1 \cf9 \ul \ulc9 ids\cf0 \ulnone \
+\cf9 			item:
+\f0 \'c3\'bf\'b4\'ce\'b1\'e9\'c0\'fa\'c9\'fa\'b3\'c9\'b5\'c4\'b6\'d4\'cf\'f3\'c3\'fb
+\f1 \cf0 \
+\cf9 			open:
+\f0 \'bf\'aa\'ca\'bc\'b1\'e9\'c0\'fa\'ca\'b1\'d2\'aa\'c6\'b4\'bd\'d3\'b5\'c4
+\f1 \cf9 \ul \ulc9 sql
+\f0 \cf9 \ulnone \'b4\'ae
+\f1 ,
+\f0 \'d4\'da\'b1\'be\'c0\'fd\'d6\'d0\'ca\'c7
+\f1  and(\cf0 \
+\cf9 			close:
+\f0 \'bd\'e1\'ca\'f8\'c6\'b4\'bd\'d3\'ca\'b1\'d2\'aa\'c6\'b4\'bd\'d3\'b5\'c4\'b4\'ae\'a3\'ac\'b1\'be\'c0\'fd\'d6\'d0\'ca\'c7
+\f1  )\cf0 \
+\cf9 			separator:
+\f0 \'b1\'e9\'c0\'fa\'b5\'c4\'c1\'bd\'b8\'f6\'b6\'d4\'cf\'f3\'d6\'d0\'bc\'e4\'d0\'e8\'d2\'aa\'c6\'b4\'bd\'d3\'b5\'c4\'b4\'ae\'a3\'ac\'b1\'be\'c0\'fd\'d6\'d0\'ca\'c7
+\f1  or\cf0 \
+\cf9 			<foreach>
+\f0 \'b1\'ea\'c7\'a9\'cc\'e2\'d6\'d0\'a3\'ba\'c3\'bf\'b4\'ce\'b1\'e9\'c0\'fa\'d2\'aa\'c6\'b4\'bd\'d3\'b5\'c4\'b4\'ae\'a3\'ac\'b1\'be\'c0\'fd\'d6\'d0\'ca\'c7
+\f1 id=#\{item_id\}\cf0 \
+\cf9 			-->\cf0 \
+			\cf9 <!--
+\f0 \'d2\'aa\'ca\'b5\'cf\'d6\'b5\'c4
+\f1 \cf9 \ul \ulc9 sql
+\f0 \cf9 \ulnone \'c6\'b4\'bd\'d3\'a3\'ba
+\f1 and (id=1 or id=10 or id=16)  -->\cf0 \
+			\cf5 <\cf6 foreach\cf0  \cf7 collection\cf0 =
+\f3\i \cf8 "ids"
+\f1\i0 \cf0  \cf7 item\cf0 =
+\f3\i \cf8 "item_id"
+\f1\i0 \cf0  \cf7 open\cf0 =
+\f3\i \cf8 "and ("
+\f1\i0 \cf0  \cf7 close\cf0 =
+\f3\i \cf8 ")"
+\f1\i0 \cf0  \cf7 separator\cf0 =
+\f3\i \cf8 "or"
+\f1\i0 \cf5 >\cf0 \
+				id=#\{item_id\}\
+			\cf5 </\cf6 foreach\cf5 >\cf0 \
+			\cf5 </\cf6 if\cf5 >\
+\
+\pard\pardeftab720\partightenfactor0
+
+\f0 \cf0 \'d4\'da\'b2\'e2\'ca\'d4\'d6\'d0\'d4\'f6\'bc\'d3\'a3\'ba
+\f1 \cf5 \
+\cf0 List<Integer> \cf10 ids\cf0  = 
+\f2\b \cf3 new
+\f1\b0 \cf0  ArrayList<>() ;\
+		\cf10 ids\cf0 .add(1);\
+		\cf10 ids\cf0 .add(10);\
+		\cf10 ids\cf0 .add(16);\
+		\cf10 userQueryVo\cf0 .setIds(\cf10 ids\cf0 );\
+
+\f0 \'bc\'b4\'bf\'c9\
+\'ca\'e4\'b3\'f6\'b5\'c4sql\'a3\'ba\
+
+\f1 select * from user WHERE user.username like '%
+\f0 \'d5\'c5\'c8\'fd\'b7\'e1
+\f1 %' and ( id=? or id=? or id=? )}
